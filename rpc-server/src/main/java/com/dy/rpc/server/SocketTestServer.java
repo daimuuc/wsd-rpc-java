@@ -1,35 +1,23 @@
 package com.dy.rpc.server;
 
-import com.dy.rpc.api.HelloService;
-import com.dy.rpc.api.StudentService;
-import com.dy.rpc.core.provider.ServiceProvider;
-import com.dy.rpc.core.provider.impl.DefaultServiceProvider;
-import com.dy.rpc.core.serializer.impl.HessianSerializer;
-import com.dy.rpc.core.serializer.impl.JsonSerializer;
-import com.dy.rpc.core.serializer.impl.KryoSerializer;
+import com.dy.rpc.core.annotation.ServiceScan;
+import com.dy.rpc.core.serializer.CommonSerializer;
+import com.dy.rpc.core.server.RpcServer;
 import com.dy.rpc.core.server.impl.SocketServer;
-import com.dy.rpc.server.service.HelloServiceImpl;
-import com.dy.rpc.server.service.StudentServiceImpl;
 
 /**
- * 测试用服务提供方（服务端）
+ * 测试用Socket服务提供方（服务端）
  *
  * @Author: chenyibai
  * @Date: 2021/1/19 16:16
  */
+// 包扫描。若未指定，则默认扫描该注解标记类所在的包。
+@ServiceScan({"com.dy.rpc.server.service"})
 public class SocketTestServer {
 
     public static void main(String[] args) {
-        HelloService helloService = new HelloServiceImpl();
-        StudentService studentService = new StudentServiceImpl();
-        ServiceProvider serviceProvider = new DefaultServiceProvider();
-        serviceProvider.register(helloService);
-        serviceProvider.register(studentService);
-        SocketServer socketServer = new SocketServer(serviceProvider);
-//        socketServer.setSerializer(new KryoSerializer());
-//        socketServer.setSerializer(new HessianSerializer());
-        socketServer.setSerializer(new JsonSerializer());
-        socketServer.start(9999);
+        RpcServer server = new SocketServer("127.0.0.1", 9999, CommonSerializer.KRYO_SERIALIZER);
+        server.start();
     }
 
 }

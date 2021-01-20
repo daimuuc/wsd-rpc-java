@@ -11,8 +11,8 @@ import com.dy.rpc.core.serializer.CommonSerializer;
  */
 public interface RpcClient {
 
-    Object sendRequest(RpcRequest rpcRequest);
+    int DEFAULT_SERIALIZER = CommonSerializer.KRYO_SERIALIZER;
 
-    void setSerializer(CommonSerializer serializer);
+    Object sendRequest(RpcRequest rpcRequest);
 
 }

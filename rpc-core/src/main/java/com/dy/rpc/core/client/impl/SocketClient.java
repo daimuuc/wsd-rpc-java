@@ -5,10 +5,12 @@ import com.dy.rpc.common.entity.RpcResponse;
 import com.dy.rpc.common.enumeration.ResponseCode;
 import com.dy.rpc.common.enumeration.RpcError;
 import com.dy.rpc.common.exception.RpcException;
+import com.dy.rpc.common.factory.ThreadPoolFactory;
 import com.dy.rpc.common.util.RpcMessageChecker;
 import com.dy.rpc.core.client.RpcClient;
 import com.dy.rpc.core.codec.ObjectReader;
 import com.dy.rpc.core.codec.ObjectWriter;
+import com.dy.rpc.core.provider.impl.ServiceProviderImpl;
 import com.dy.rpc.core.serializer.CommonSerializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,12 +32,16 @@ public class SocketClient implements RpcClient {
 
     private final String host;
     private final int port;
-
     private CommonSerializer serializer;
 
     public SocketClient(String host, int port) {
+        this(host, port, DEFAULT_SERIALIZER);
+    }
+
+    public SocketClient(String host, int port, Integer serializer) {
         this.host = host;
         this.port = port;
+        this.serializer = CommonSerializer.getByCode(serializer);
     }
 
     @Override
@@ -64,11 +70,6 @@ public class SocketClient implements RpcClient {
             logger.error("调用时有错误发生：", e);
             throw new RpcException("服务调用失败: ", e);
         }
-    }
-
-    @Override
-    public void setSerializer(CommonSerializer serializer) {
-        this.serializer = serializer;
     }
 
 }

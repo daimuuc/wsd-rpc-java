@@ -14,7 +14,7 @@ public interface ServiceProvider {
      * @param service 待注册的服务实体
      * @param <T>     服务实体类
      */
-    <T> void register(T service);
+    <T> void registerService(T service, String serviceName);
 
     /**
      * 根据服务名称获取服务实体
