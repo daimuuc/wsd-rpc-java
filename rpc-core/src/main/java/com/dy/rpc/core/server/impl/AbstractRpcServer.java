@@ -6,6 +6,7 @@ import com.dy.rpc.common.util.ReflectUtil;
 import com.dy.rpc.core.annotation.Service;
 import com.dy.rpc.core.annotation.ServiceScan;
 import com.dy.rpc.core.provider.ServiceProvider;
+import com.dy.rpc.core.registry.ServiceRegistry;
 import com.dy.rpc.core.server.RpcServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +25,7 @@ public abstract class AbstractRpcServer implements RpcServer {
     protected String host;
     protected int port;
 
+    protected ServiceRegistry serviceRegistry;
     protected ServiceProvider serviceProvider;
 
     public void scanServices() {
@@ -71,6 +73,7 @@ public abstract class AbstractRpcServer implements RpcServer {
     @Override
     public <T> void publishService(T service, String serviceName) {
         serviceProvider.registerService(service, serviceName);
+        serviceRegistry.register(serviceName, new InetSocketAddress(host, port));
     }
 
 }

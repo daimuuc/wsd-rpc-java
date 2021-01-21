@@ -2,15 +2,17 @@ package com.dy.rpc.core.client.impl;
 
 import com.dy.rpc.common.entity.RpcRequest;
 import com.dy.rpc.common.entity.RpcResponse;
+import com.dy.rpc.common.enumeration.LoadBalancerCode;
 import com.dy.rpc.common.enumeration.ResponseCode;
 import com.dy.rpc.common.enumeration.RpcError;
 import com.dy.rpc.common.exception.RpcException;
-import com.dy.rpc.common.factory.ThreadPoolFactory;
 import com.dy.rpc.common.util.RpcMessageChecker;
 import com.dy.rpc.core.client.RpcClient;
 import com.dy.rpc.core.codec.ObjectReader;
 import com.dy.rpc.core.codec.ObjectWriter;
-import com.dy.rpc.core.provider.impl.ServiceProviderImpl;
+import com.dy.rpc.core.loadbalancer.CommonLoadBalancer;
+import com.dy.rpc.core.registry.ServiceDiscovery;
+import com.dy.rpc.core.registry.impl.NacosServiceDiscovery;
 import com.dy.rpc.core.serializer.CommonSerializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +20,7 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.InetSocketAddress;
 import java.net.Socket;
 
 /**
@@ -30,17 +33,15 @@ public class SocketClient implements RpcClient {
 
     private static final Logger logger = LoggerFactory.getLogger(SocketClient.class);
 
-    private final String host;
-    private final int port;
-    private CommonSerializer serializer;
+    private final ServiceDiscovery serviceDiscovery;
+    private final CommonSerializer serializer;
 
-    public SocketClient(String host, int port) {
-        this(host, port, DEFAULT_SERIALIZER);
+    public SocketClient() {
+        this(DEFAULT_SERIALIZER, DEFAULT_LOAD_BALANCER);
     }
 
-    public SocketClient(String host, int port, Integer serializer) {
-        this.host = host;
-        this.port = port;
+    public SocketClient(Integer serializer, Integer loadBalancer) {
+        this.serviceDiscovery = new NacosServiceDiscovery(loadBalancer);
         this.serializer = CommonSerializer.getByCode(serializer);
     }
 
@@ -50,7 +51,10 @@ public class SocketClient implements RpcClient {
             logger.error("未设置序列化器");
             throw new RpcException(RpcError.SERIALIZER_NOT_FOUND);
         }
-        try (Socket socket = new Socket(host, port)) {
+
+        InetSocketAddress inetSocketAddress = serviceDiscovery.lookupService(rpcRequest.getInterfaceName());
+        try (Socket socket = new Socket()) {
+            socket.connect(inetSocketAddress);
             OutputStream outputStream = socket.getOutputStream();
             InputStream inputStream = socket.getInputStream();
             ObjectWriter.writeObject(outputStream, rpcRequest, serializer);
@@ -65,7 +69,7 @@ public class SocketClient implements RpcClient {
                 throw new RpcException(RpcError.SERVICE_INVOCATION_FAILURE, " service:" + rpcRequest.getInterfaceName());
             }
             RpcMessageChecker.check(rpcRequest, rpcResponse);
-            return rpcResponse.getData();
+            return rpcResponse;
         } catch (IOException e) {
             logger.error("调用时有错误发生：", e);
             throw new RpcException("服务调用失败: ", e);

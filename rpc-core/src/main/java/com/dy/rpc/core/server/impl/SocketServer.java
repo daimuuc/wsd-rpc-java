@@ -4,6 +4,7 @@ import com.dy.rpc.common.enumeration.RpcError;
 import com.dy.rpc.common.exception.RpcException;
 import com.dy.rpc.common.factory.ThreadPoolFactory;
 import com.dy.rpc.core.provider.impl.ServiceProviderImpl;
+import com.dy.rpc.core.registry.impl.NacosServiceRegistry;
 import com.dy.rpc.core.serializer.CommonSerializer;
 import com.dy.rpc.core.server.RequestHandler;
 import com.dy.rpc.core.server.RequestHandlerThread;
@@ -38,6 +39,7 @@ public class SocketServer extends AbstractRpcServer {
         this.host = host;
         this.port = port;
         threadPool = ThreadPoolFactory.createDefaultThreadPool("socket-rpc-server");
+        this.serviceRegistry = new NacosServiceRegistry();
         this.serviceProvider = new ServiceProviderImpl();
         this.serializer = CommonSerializer.getByCode(serializer);
         scanServices();

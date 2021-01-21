@@ -6,6 +6,7 @@ import com.dy.rpc.api.Student;
 import com.dy.rpc.api.StudentService;
 import com.dy.rpc.core.client.RpcClientProxy;
 import com.dy.rpc.core.client.impl.SocketClient;
+import com.dy.rpc.core.loadbalancer.CommonLoadBalancer;
 import com.dy.rpc.core.serializer.CommonSerializer;
 
 /**
@@ -15,7 +16,7 @@ import com.dy.rpc.core.serializer.CommonSerializer;
 public class SocketTestClient {
 
     public static void main(String[] args) {
-        SocketClient client = new SocketClient("127.0.0.1", 9999, CommonSerializer.KRYO_SERIALIZER);
+        SocketClient client = new SocketClient(CommonSerializer.KRYO_SERIALIZER, CommonLoadBalancer.RANDOM_LOAD_BALANCER);
         RpcClientProxy proxy = new RpcClientProxy(client);
 
         HelloService helloService = proxy.getProxy(HelloService.class);
