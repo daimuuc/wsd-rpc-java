@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3da4bc02-fe09-40d3-984a-147297ad0eb1" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1nGpOjTQlvrVSDTGHM5Fk0RuDMG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../java" />
+  </component>
+  <component name="RunManager" selected="Application.SocketTestClient">
+    <configuration name="NettyTestClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dy.rpc.client.NettyTestClient" />
+      <module name="rpc-client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dy.rpc.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NettyTestServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dy.rpc.server.NettyTestServer" />
+      <module name="rpc-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dy.rpc.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SocketTestClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dy.rpc.client.SocketTestClient" />
+      <module name="rpc-client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dy.rpc.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SocketTestServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dy.rpc.server.SocketTestServer" />
+      <module name="rpc-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dy.rpc.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RpcApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="rpc-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dy.rpcapi.RpcApiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RpcClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="rpc-client" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dy.rpcclient.RpcClientApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RpcCommonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="rpc-common" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dy.rpccommon.RpcCommonApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RpcCoreApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="rpc-core" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dy.rpccore.RpcCoreApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RpcServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="rpc-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dy.rpcserver.RpcServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SocketTestClient" />
+        <item itemvalue="Application.NettyTestClient" />
+        <item itemvalue="Application.SocketTestServer" />
+        <item itemvalue="Application.NettyTestServer" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3da4bc02-fe09-40d3-984a-147297ad0eb1" name="Default Changelist" comment="" />
+      <created>1611026253620</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611026253620</updated>
+      <workItem from="1611026254919" duration="16406000" />
+      <workItem from="1611055429853" duration="10346000" />
+      <workItem from="1611123707728" duration="6557000" />
+      <workItem from="1611130671672" duration="5695000" />
+      <workItem from="1611208394658" duration="97000" />
+      <workItem from="1611208498318" duration="987000" />
+      <workItem from="1611219819373" duration="17843000" />
+      <workItem from="1611302962307" duration="8309000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/client/netty/NettyClient.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/client/netty/ChannelProvider.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
