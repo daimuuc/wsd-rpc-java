@@ -64,6 +64,7 @@ public class NacosUtil {
                 String serviceName = iterator.next();
                 try {
                     namingService.deregisterInstance(serviceName, host, port);
+                    logger.info("注销服务 {} 成功", serviceName);
                 } catch (NacosException e) {
                     logger.error("注销服务 {} 失败", serviceName, e);
                 }

@@ -2,8 +2,8 @@ package com.dy.rpc.server;
 
 import com.dy.rpc.core.annotation.ServiceScan;
 import com.dy.rpc.core.serializer.CommonSerializer;
-import com.dy.rpc.core.server.RpcServer;
-import com.dy.rpc.core.server.impl.NettyServer;
+import com.dy.rpc.core.transport.server.RpcServer;
+import com.dy.rpc.core.transport.server.netty.NettyServer;
 
 /**
  * 测试用Netty服务提供者（服务端）

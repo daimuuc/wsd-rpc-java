@@ -2,8 +2,8 @@ package com.dy.rpc.server;
 
 import com.dy.rpc.core.annotation.ServiceScan;
 import com.dy.rpc.core.serializer.CommonSerializer;
-import com.dy.rpc.core.server.RpcServer;
-import com.dy.rpc.core.server.impl.SocketServer;
+import com.dy.rpc.core.transport.server.RpcServer;
+import com.dy.rpc.core.transport.server.socket.SocketServer;
 
 /**
  * 测试用Socket服务提供方（服务端）

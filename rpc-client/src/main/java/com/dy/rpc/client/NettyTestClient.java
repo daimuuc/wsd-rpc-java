@@ -1,12 +1,10 @@
 package com.dy.rpc.client;
 
-import com.dy.rpc.api.HelloObject;
-import com.dy.rpc.api.HelloService;
-import com.dy.rpc.api.Student;
-import com.dy.rpc.api.StudentService;
-import com.dy.rpc.core.client.RpcClient;
-import com.dy.rpc.core.client.RpcClientProxy;
-import com.dy.rpc.core.client.impl.NettyClient;
+import com.dy.rpc.api.*;
+import com.dy.rpc.core.transport.client.RpcClient;
+import com.dy.rpc.core.transport.client.RpcClientProxy;
+import com.dy.rpc.core.transport.client.netty.NettyClient;
+import com.dy.rpc.core.loadbalancer.CommonLoadBalancer;
 import com.dy.rpc.core.serializer.CommonSerializer;
 
 /**
@@ -16,7 +14,7 @@ import com.dy.rpc.core.serializer.CommonSerializer;
 public class NettyTestClient {
 
     public static void main(String[] args) {
-        RpcClient client = new NettyClient("127.0.0.1", 9999, CommonSerializer.KRYO_SERIALIZER);
+        RpcClient client = new NettyClient(CommonSerializer.KRYO_SERIALIZER, CommonLoadBalancer.RANDOM_LOAD_BALANCER);
         RpcClientProxy proxy = new RpcClientProxy(client);
 
         HelloService helloService = proxy.getProxy(HelloService.class);
@@ -27,6 +25,9 @@ public class NettyTestClient {
         StudentService studentService = proxy.getProxy(StudentService.class);
         Student student = new Student("一白", 23, "男");
         studentService.printInfo(student);
+
+        ByeService byeService = proxy.getProxy(ByeService.class);
+        System.out.println(byeService.bye("bye, china"));
     }
 
 }

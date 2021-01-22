@@ -1,11 +1,8 @@
 package com.dy.rpc.client;
 
-import com.dy.rpc.api.HelloObject;
-import com.dy.rpc.api.HelloService;
-import com.dy.rpc.api.Student;
-import com.dy.rpc.api.StudentService;
-import com.dy.rpc.core.client.RpcClientProxy;
-import com.dy.rpc.core.client.impl.SocketClient;
+import com.dy.rpc.api.*;
+import com.dy.rpc.core.transport.client.RpcClientProxy;
+import com.dy.rpc.core.transport.client.socket.SocketClient;
 import com.dy.rpc.core.loadbalancer.CommonLoadBalancer;
 import com.dy.rpc.core.serializer.CommonSerializer;
 
@@ -27,6 +24,9 @@ public class SocketTestClient {
         StudentService studentService = proxy.getProxy(StudentService.class);
         Student student = new Student("一白", 23, "男");
         studentService.printInfo(student);
+
+        ByeService byeService = proxy.getProxy(ByeService.class);
+        System.out.println(byeService.bye("bye, china"));
     }
 
 }
