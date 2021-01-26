@@ -12,9 +12,6 @@ import com.dy.rpc.core.serializer.CommonSerializer;
  */
 public interface RpcClient {
 
-    int DEFAULT_SERIALIZER = CommonSerializer.DEFAULT_SERIALIZER;
-    int DEFAULT_LOAD_BALANCER = CommonLoadBalancer.DEFAULT_SERIALIZER;
-
     Object sendRequest(RpcRequest rpcRequest);
 
 }

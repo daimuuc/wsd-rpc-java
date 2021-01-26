@@ -1,0 +1,1 @@
+commonLoadBalancer=com.dy.rpc.core.loadbalancer.impl.RandomLoadBalancer

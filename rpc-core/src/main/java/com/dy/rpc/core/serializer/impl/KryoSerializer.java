@@ -8,6 +8,7 @@ import com.dy.rpc.core.serializer.CommonSerializer;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.io.Input;
 import com.esotericsoftware.kryo.io.Output;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,6 +23,7 @@ import java.io.ByteArrayOutputStream;
  * @Author: chenyibai
  * @Date: 2021/1/19 15:07
  */
+@Slf4j
 public class KryoSerializer implements CommonSerializer {
 
     private static final Logger logger = LoggerFactory.getLogger(KryoSerializer.class);

@@ -1,11 +1,14 @@
 package com.dy.rpc.core.provider;
 
+import com.dy.rpc.common.extension.SPI;
+
 /**
  * 服务注册表通用接口
  *
  * @Author: chenyibai
  * @Date: 2021/1/19 15:47
  */
+@SPI
 public interface ServiceProvider {
 
     /**

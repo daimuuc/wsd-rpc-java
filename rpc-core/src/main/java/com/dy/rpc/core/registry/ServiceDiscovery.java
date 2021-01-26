@@ -1,5 +1,7 @@
 package com.dy.rpc.core.registry;
 
+import com.dy.rpc.common.extension.SPI;
+
 import java.net.InetSocketAddress;
 
 /**
@@ -8,6 +10,7 @@ import java.net.InetSocketAddress;
  * @Author: chenyibai
  * @Date: 2021/1/21 17:31
  */
+@SPI
 public interface ServiceDiscovery {
 
     /**

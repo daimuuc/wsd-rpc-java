@@ -1,5 +1,8 @@
 package com.dy.rpc.core.registry;
 
+import com.dy.rpc.common.extension.SPI;
+import lombok.extern.slf4j.Slf4j;
+
 import java.net.InetSocketAddress;
 
 /**
@@ -8,6 +11,7 @@ import java.net.InetSocketAddress;
  * @Author: chenyibai
  * @Date: 2021/1/21 17:32
  */
+@SPI
 public interface ServiceRegistry {
 
     /**

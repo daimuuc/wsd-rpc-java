@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: io.protostuff:protostuff-core:1.7.2">
+    <CLASSES>
+      <root url="jar://E:/maven_repo/io/protostuff/protostuff-core/1.7.2/protostuff-core-1.7.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://E:/maven_repo/io/protostuff/protostuff-core/1.7.2/protostuff-core-1.7.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://E:/maven_repo/io/protostuff/protostuff-core/1.7.2/protostuff-core-1.7.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

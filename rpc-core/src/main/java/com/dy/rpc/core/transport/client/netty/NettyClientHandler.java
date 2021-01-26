@@ -12,6 +12,7 @@ import io.netty.handler.timeout.IdleState;
 import io.netty.handler.timeout.IdleStateEvent;
 import io.netty.util.AttributeKey;
 import io.netty.util.ReferenceCountUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,6 +24,7 @@ import java.net.InetSocketAddress;
  * @Author: chenyibai
  * @Date: 2021/1/20 16:44
  */
+@Slf4j
 public class NettyClientHandler extends SimpleChannelInboundHandler<RpcResponse> {
 
     private static final Logger logger = LoggerFactory.getLogger(NettyClientHandler.class);

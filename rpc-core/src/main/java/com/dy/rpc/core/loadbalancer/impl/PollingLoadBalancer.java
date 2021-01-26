@@ -2,6 +2,7 @@ package com.dy.rpc.core.loadbalancer.impl;
 
 import com.alibaba.nacos.api.naming.pojo.Instance;
 import com.dy.rpc.common.enumeration.LoadBalancerCode;
+import com.dy.rpc.core.loadbalancer.AbstractLoadBalancer;
 import com.dy.rpc.core.loadbalancer.CommonLoadBalancer;
 
 import java.util.List;
@@ -12,21 +13,16 @@ import java.util.List;
  * @Author: chenyibai
  * @Date: 2021/1/21 17:17
  */
-public class PollingLoadBalancer implements CommonLoadBalancer {
+public class PollingLoadBalancer extends AbstractLoadBalancer {
 
     private int index = 0;
 
     @Override
-    public Instance select(List<Instance> instances) {
+    public Instance doSelect(List<Instance> instances, String serviceName) {
         if(index >= instances.size()) {
             index %= instances.size();
         }
         return instances.get(index++);
-    }
-
-    @Override
-    public int getCode() {
-        return LoadBalancerCode.valueOf("POLLING").getCode();
     }
 
 }

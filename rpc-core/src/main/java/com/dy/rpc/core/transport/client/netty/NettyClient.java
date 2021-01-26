@@ -4,6 +4,7 @@ import com.dy.rpc.common.entity.RpcRequest;
 import com.dy.rpc.common.entity.RpcResponse;
 import com.dy.rpc.common.enumeration.RpcError;
 import com.dy.rpc.common.exception.RpcException;
+import com.dy.rpc.common.extension.ExtensionLoader;
 import com.dy.rpc.common.factory.SingletonFactory;
 import com.dy.rpc.core.registry.ServiceDiscovery;
 import com.dy.rpc.core.registry.impl.NacosServiceDiscovery;
@@ -13,6 +14,7 @@ import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,6 +27,7 @@ import java.util.concurrent.CompletableFuture;
  * @Author: chenyibai
  * @Date: 2021/1/20 16:30
  */
+@Slf4j
 public class NettyClient implements RpcClient {
 
     private static final Logger logger = LoggerFactory.getLogger(NettyClient.class);
@@ -43,13 +46,9 @@ public class NettyClient implements RpcClient {
 
     private final UnprocessedRequests unprocessedRequests;
 
-
     public NettyClient() {
-        this(DEFAULT_SERIALIZER, DEFAULT_LOAD_BALANCER);
-    }
-    public NettyClient(Integer serializer, Integer loadBalancer) {
-        this.serviceDiscovery = new NacosServiceDiscovery(loadBalancer);
-        this.serializer = CommonSerializer.getByCode(serializer);
+        this.serviceDiscovery = ExtensionLoader.getExtensionLoader(ServiceDiscovery.class).getExtension("serviceDiscovery");
+        this.serializer = ExtensionLoader.getExtensionLoader(CommonSerializer.class).getExtension("commonSerializer");
         this.unprocessedRequests = SingletonFactory.getInstance(UnprocessedRequests.class);
     }
 

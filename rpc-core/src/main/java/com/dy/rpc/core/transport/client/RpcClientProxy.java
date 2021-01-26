@@ -5,6 +5,7 @@ import com.dy.rpc.common.entity.RpcResponse;
 import com.dy.rpc.common.util.RpcMessageChecker;
 import com.dy.rpc.core.transport.client.netty.NettyClient;
 import com.dy.rpc.core.transport.client.socket.SocketClient;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,6 +21,7 @@ import java.util.concurrent.CompletableFuture;
  * @Author: chenyibai
  * @Date: 2021/1/19 15:39
  */
+@Slf4j
 public class RpcClientProxy implements InvocationHandler {
 
     private static final Logger logger = LoggerFactory.getLogger(RpcClientProxy.class);

@@ -1,7 +1,6 @@
 package com.dy.rpc.server;
 
 import com.dy.rpc.core.annotation.ServiceScan;
-import com.dy.rpc.core.serializer.CommonSerializer;
 import com.dy.rpc.core.transport.server.RpcServer;
 import com.dy.rpc.core.transport.server.netty.NettyServer;
 
@@ -15,7 +14,7 @@ import com.dy.rpc.core.transport.server.netty.NettyServer;
 public class NettyTestServer {
 
     public static void main(String[] args) {
-        RpcServer server = new NettyServer("127.0.0.1", 9999, CommonSerializer.KRYO_SERIALIZER);
+        RpcServer server = new NettyServer("127.0.0.1", 9999);
         server.start();
     }
 

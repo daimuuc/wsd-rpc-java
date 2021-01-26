@@ -2,10 +2,13 @@ package com.dy.rpc.core.transport.server.netty;
 
 import com.dy.rpc.common.enumeration.RpcError;
 import com.dy.rpc.common.exception.RpcException;
+import com.dy.rpc.common.extension.ExtensionLoader;
 import com.dy.rpc.core.codec.CommonDecoder;
 import com.dy.rpc.core.codec.CommonEncoder;
 import com.dy.rpc.core.hook.ShutdownHook;
+import com.dy.rpc.core.provider.ServiceProvider;
 import com.dy.rpc.core.provider.impl.ServiceProviderImpl;
+import com.dy.rpc.core.registry.ServiceRegistry;
 import com.dy.rpc.core.registry.impl.NacosServiceRegistry;
 import com.dy.rpc.core.serializer.CommonSerializer;
 import com.dy.rpc.core.transport.server.AbstractRpcServer;
@@ -34,15 +37,11 @@ public class NettyServer extends AbstractRpcServer {
     private CommonSerializer serializer;
 
     public NettyServer(String host, int port) {
-        this(host, port, DEFAULT_SERIALIZER);
-    }
-
-    public NettyServer(String host, int port, Integer serializer) {
         this.host = host;
         this.port = port;
-        this.serviceRegistry = new NacosServiceRegistry();
-        this.serviceProvider = new ServiceProviderImpl();
-        this.serializer = CommonSerializer.getByCode(serializer);
+        this.serviceRegistry = ExtensionLoader.getExtensionLoader(ServiceRegistry.class).getExtension("serviceRegistry");
+        this.serviceProvider = ExtensionLoader.getExtensionLoader(ServiceProvider.class).getExtension("serviceProvider");
+        this.serializer = ExtensionLoader.getExtensionLoader(CommonSerializer.class).getExtension("commonSerializer");
         scanServices();
     }
 

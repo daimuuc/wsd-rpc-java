@@ -4,9 +4,11 @@ import com.alibaba.nacos.api.exception.NacosException;
 import com.alibaba.nacos.api.naming.pojo.Instance;
 import com.dy.rpc.common.enumeration.RpcError;
 import com.dy.rpc.common.exception.RpcException;
+import com.dy.rpc.common.extension.ExtensionLoader;
 import com.dy.rpc.common.util.NacosUtil;
 import com.dy.rpc.core.loadbalancer.CommonLoadBalancer;
 import com.dy.rpc.core.registry.ServiceDiscovery;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,14 +22,15 @@ import java.util.List;
  * @Author: chenyibai
  * @Date: 2021/1/21 17:35
  */
+@Slf4j
 public class NacosServiceDiscovery implements ServiceDiscovery {
 
     private static final Logger logger = LoggerFactory.getLogger(NacosServiceDiscovery.class);
 
     private final CommonLoadBalancer loadBalancer;
 
-    public NacosServiceDiscovery(Integer loadBalancer) {
-        this.loadBalancer = CommonLoadBalancer.getByCode(loadBalancer);
+    public NacosServiceDiscovery() {
+        this.loadBalancer = ExtensionLoader.getExtensionLoader(CommonLoadBalancer.class).getExtension("commonLoadBalancer");
     }
 
     @Override
@@ -38,7 +41,7 @@ public class NacosServiceDiscovery implements ServiceDiscovery {
                 logger.error("找不到对应的服务: " + serviceName);
                 throw new RpcException(RpcError.SERVICE_NOT_FOUND);
             }
-            Instance instance = loadBalancer.select(instances);
+            Instance instance = loadBalancer.select(instances, serviceName);
             return new InetSocketAddress(instance.getIp(), instance.getPort());
         } catch (NacosException e) {
             logger.error("获取服务时有错误发生:", e);

@@ -14,7 +14,7 @@ import com.dy.rpc.core.serializer.CommonSerializer;
 public class NettyTestClient {
 
     public static void main(String[] args) {
-        RpcClient client = new NettyClient(CommonSerializer.KRYO_SERIALIZER, CommonLoadBalancer.RANDOM_LOAD_BALANCER);
+        RpcClient client = new NettyClient();
         RpcClientProxy proxy = new RpcClientProxy(client);
 
         HelloService helloService = proxy.getProxy(HelloService.class);

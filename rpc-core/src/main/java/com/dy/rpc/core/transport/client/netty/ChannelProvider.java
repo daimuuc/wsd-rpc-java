@@ -9,6 +9,7 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.timeout.IdleStateHandler;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,6 +26,7 @@ import java.util.concurrent.TimeUnit;
  * @Author: chenyibai
  * @Date: 2021/1/22 15:47
  */
+@Slf4j
 public class ChannelProvider {
 
     private static final Logger logger = LoggerFactory.getLogger(ChannelProvider.class);

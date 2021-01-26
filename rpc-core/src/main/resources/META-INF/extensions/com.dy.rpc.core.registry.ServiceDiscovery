@@ -1,0 +1,1 @@
+serviceDiscovery=com.dy.rpc.core.registry.impl.NacosServiceDiscovery

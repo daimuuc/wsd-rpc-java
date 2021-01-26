@@ -5,6 +5,7 @@ import com.dy.rpc.common.enumeration.RpcError;
 import com.dy.rpc.common.exception.RpcException;
 import com.dy.rpc.common.util.NacosUtil;
 import com.dy.rpc.core.registry.ServiceRegistry;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,6 +17,7 @@ import java.net.InetSocketAddress;
  * @Author: chenyibai
  * @Date: 2021/1/21 18:59
  */
+@Slf4j
 public class NacosServiceRegistry implements ServiceRegistry {
 
     private static final Logger logger = LoggerFactory.getLogger(NacosServiceRegistry.class);
