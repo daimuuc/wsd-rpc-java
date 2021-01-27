@@ -36,13 +36,16 @@ public class NacosServiceDiscovery implements ServiceDiscovery {
     @Override
     public InetSocketAddress lookupService(String serviceName) {
         try {
-            List<Instance> instances = NacosUtil.getAllInstance(serviceName);
-            if(instances.size() == 0) {
+            List<String> serviceAddresses = NacosUtil.getAllInstanceStr(serviceName);
+            if(serviceAddresses.size() == 0) {
                 logger.error("找不到对应的服务: " + serviceName);
                 throw new RpcException(RpcError.SERVICE_NOT_FOUND);
             }
-            Instance instance = loadBalancer.select(instances, serviceName);
-            return new InetSocketAddress(instance.getIp(), instance.getPort());
+            String targetServiceUrl = loadBalancer.select(serviceAddresses, serviceName);
+            String[] socketAddressArray = targetServiceUrl.split(":");
+            String host = socketAddressArray[0];
+            int port = Integer.parseInt(socketAddressArray[1]);
+            return new InetSocketAddress(host, port);
         } catch (NacosException e) {
             logger.error("获取服务时有错误发生:", e);
         }

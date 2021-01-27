@@ -18,11 +18,11 @@ public class PollingLoadBalancer extends AbstractLoadBalancer {
     private int index = 0;
 
     @Override
-    public Instance doSelect(List<Instance> instances, String serviceName) {
-        if(index >= instances.size()) {
-            index %= instances.size();
+    public String doSelect(List<String> serviceAddresses, String serviceName) {
+        if(index >= serviceAddresses.size()) {
+            index %= serviceAddresses.size();
         }
-        return instances.get(index++);
+        return serviceAddresses.get(index++);
     }
 
 }

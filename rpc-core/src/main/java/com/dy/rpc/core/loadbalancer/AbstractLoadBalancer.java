@@ -11,16 +11,16 @@ import java.util.List;
 public abstract class AbstractLoadBalancer implements CommonLoadBalancer{
 
     @Override
-    public Instance select(List<Instance> instances, String serviceName) {
-        if (instances == null || instances.size() == 0) {
+    public String select(List<String> serviceAddresses, String serviceName) {
+        if (serviceAddresses == null || serviceAddresses.size() == 0) {
             return null;
         }
-        if (instances.size() == 1) {
-            return instances.get(0);
+        if (serviceAddresses.size() == 1) {
+            return serviceAddresses.get(0);
         }
-        return doSelect(instances, serviceName);
+        return doSelect(serviceAddresses, serviceName);
     }
 
-    protected abstract Instance doSelect(List<Instance> instances, String serviceName);
+    protected abstract String doSelect(List<String> serviceAddresses, String serviceName);
 
 }

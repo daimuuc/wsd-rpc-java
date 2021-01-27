@@ -14,6 +14,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * 管理Nacos连接等工具类
@@ -53,6 +54,15 @@ public class NacosUtil {
 
     public static List<Instance> getAllInstance(String serviceName) throws NacosException {
         return namingService.getAllInstances(serviceName);
+    }
+
+    public static List<String> getAllInstanceStr(String serviceName) throws NacosException {
+        List<Instance> instances = getAllInstance(serviceName);
+        List<String> instanceStrs = instances.stream()
+                                             .map(instance -> instance.getIp() + ":" + instance.getPort())
+                                             .collect(Collectors.toList());
+
+        return instanceStrs;
     }
 
     public static void clearRegistry() {

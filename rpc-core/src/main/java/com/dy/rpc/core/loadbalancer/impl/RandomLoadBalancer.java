@@ -18,8 +18,8 @@ import java.util.Random;
 public class RandomLoadBalancer extends AbstractLoadBalancer {
 
     @Override
-    public Instance doSelect(List<Instance> instances, String serviceName) {
-        return instances.get(new Random().nextInt(instances.size()));
+    public String doSelect(List<String> serviceAddresses, String serviceName) {
+        return serviceAddresses.get(new Random().nextInt(serviceAddresses.size()));
     }
 
 }

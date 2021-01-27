@@ -14,6 +14,6 @@ import java.util.List;
 @SPI
 public interface CommonLoadBalancer {
 
-    Instance select(List<Instance> instances, String serviceName);
+    String select(List<String> serviceAddresses, String serviceName);
 
 }
