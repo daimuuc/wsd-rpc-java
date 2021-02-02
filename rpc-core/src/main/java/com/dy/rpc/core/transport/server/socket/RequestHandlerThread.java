@@ -4,6 +4,7 @@ import com.dy.rpc.common.entity.RpcRequest;
 import com.dy.rpc.common.entity.RpcResponse;
 import com.dy.rpc.core.codec.ObjectReader;
 import com.dy.rpc.core.codec.ObjectWriter;
+import com.dy.rpc.core.compress.Compress;
 import com.dy.rpc.core.serializer.CommonSerializer;
 import com.dy.rpc.core.transport.server.RequestHandler;
 import org.slf4j.Logger;
@@ -27,11 +28,13 @@ public class RequestHandlerThread implements Runnable {
     private Socket socket;
     private RequestHandler requestHandler;
     private CommonSerializer serializer;
+    private Compress compress;
 
-    public RequestHandlerThread(Socket socket, RequestHandler requestHandler, CommonSerializer serializer) {
+    public RequestHandlerThread(Socket socket, RequestHandler requestHandler, CommonSerializer serializer, Compress compress) {
         this.socket = socket;
         this.requestHandler = requestHandler;
         this.serializer = serializer;
+        this.compress = compress;
     }
 
     @Override
@@ -41,7 +44,7 @@ public class RequestHandlerThread implements Runnable {
             RpcRequest rpcRequest = (RpcRequest) ObjectReader.readObject(inputStream);
             Object result = requestHandler.handle(rpcRequest);
             RpcResponse<Object> response = RpcResponse.success(result, rpcRequest.getRequestId());
-            ObjectWriter.writeObject(outputStream, response, serializer);
+            ObjectWriter.writeObject(outputStream, response, serializer, compress);
         } catch (IOException e) {
             logger.error("调用或发送时有错误发生：", e);
         }

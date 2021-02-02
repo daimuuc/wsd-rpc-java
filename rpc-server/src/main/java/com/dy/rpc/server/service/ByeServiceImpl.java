@@ -1,13 +1,13 @@
 package com.dy.rpc.server.service;
 
 import com.dy.rpc.api.ByeService;
-import com.dy.rpc.core.annotation.Service;
+import com.dy.rpc.core.annotation.RPCService;
 
 /**
  * @Author: chenyibai
  * @Date: 2021/1/22 17:50
  */
-@Service
+@RPCService
 public class ByeServiceImpl implements ByeService {
 
     @Override

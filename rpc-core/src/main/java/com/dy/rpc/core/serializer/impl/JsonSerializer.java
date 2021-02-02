@@ -67,7 +67,8 @@ public class JsonSerializer implements CommonSerializer {
 
     @Override
     public int getCode() {
-        return SerializerCode.valueOf("JSON").getCode();
+//        return SerializerCode.valueOf("JSON").getCode();
+        return JSON_SERIALIZER;
     }
 
 }

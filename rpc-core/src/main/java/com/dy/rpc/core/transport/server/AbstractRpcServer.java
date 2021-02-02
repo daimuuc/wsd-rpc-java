@@ -3,11 +3,10 @@ package com.dy.rpc.core.transport.server;
 import com.dy.rpc.common.enumeration.RpcError;
 import com.dy.rpc.common.exception.RpcException;
 import com.dy.rpc.common.util.ReflectUtil;
-import com.dy.rpc.core.annotation.Service;
-import com.dy.rpc.core.annotation.ServiceScan;
+import com.dy.rpc.core.annotation.RPCService;
+import com.dy.rpc.core.annotation.RPCServiceScan;
 import com.dy.rpc.core.provider.ServiceProvider;
 import com.dy.rpc.core.registry.ServiceRegistry;
-import com.dy.rpc.core.transport.server.RpcServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,7 +32,7 @@ public abstract class AbstractRpcServer implements RpcServer {
         Class<?> startClass;
         try {
             startClass = Class.forName(mainClassName);
-            if(!startClass.isAnnotationPresent(ServiceScan.class)) {
+            if(!startClass.isAnnotationPresent(RPCServiceScan.class)) {
                 logger.error("启动类缺少 @ServiceScan 注解");
                 throw new RpcException(RpcError.SERVICE_SCAN_PACKAGE_NOT_FOUND);
             }
@@ -42,15 +41,15 @@ public abstract class AbstractRpcServer implements RpcServer {
             throw new RpcException(RpcError.UNKNOWN_ERROR);
         }
 
-        String[] packageNameNum = startClass.getAnnotation(ServiceScan.class).value();
+        String[] packageNameNum = startClass.getAnnotation(RPCServiceScan.class).value();
         if (packageNameNum.length == 0) {
             String basePackage = mainClassName.substring(0, mainClassName.lastIndexOf("."));
             packageNameNum = new String[] {basePackage};
         }
         Set<Class<?>> classSet = ReflectUtil.getAllClasses(packageNameNum);
         for(Class<?> clazz : classSet) {
-            if(clazz.isAnnotationPresent(Service.class)) {
-                String serviceName = clazz.getAnnotation(Service.class).value();
+            if(clazz.isAnnotationPresent(RPCService.class)) {
+                String serviceName = clazz.getAnnotation(RPCService.class).value();
                 Object obj;
                 try {
                     obj = clazz.newInstance();

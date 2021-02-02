@@ -61,7 +61,8 @@ public class HessianSerializer implements CommonSerializer {
 
     @Override
     public int getCode() {
-        return SerializerCode.valueOf("HESSIAN").getCode();
+//        return SerializerCode.valueOf("HESSIAN").getCode();
+        return HESSIAN_SERIALIZER;
     }
 
 }

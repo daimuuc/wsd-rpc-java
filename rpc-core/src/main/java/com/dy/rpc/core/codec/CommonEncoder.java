@@ -2,6 +2,7 @@ package com.dy.rpc.core.codec;
 
 import com.dy.rpc.common.entity.RpcRequest;
 import com.dy.rpc.common.enumeration.PackageType;
+import com.dy.rpc.core.compress.Compress;
 import com.dy.rpc.core.serializer.CommonSerializer;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
@@ -16,9 +17,11 @@ public class CommonEncoder extends MessageToByteEncoder {
     private static final int MAGIC_NUMBER = 0xCAFEBABE;
 
     private final CommonSerializer serializer;
+    private final Compress compress;
 
-    public CommonEncoder(CommonSerializer serializer) {
+    public CommonEncoder(CommonSerializer serializer, Compress compress) {
         this.serializer = serializer;
+        this.compress = compress;
     }
 
     @Override
@@ -30,7 +33,9 @@ public class CommonEncoder extends MessageToByteEncoder {
             out.writeInt(PackageType.RESPONSE_PACK.getCode());
         }
         out.writeInt(serializer.getCode());
+        out.writeInt(compress.getCode());
         byte[] bytes = serializer.serialize(msg);
+        bytes = compress.compress(bytes);
         out.writeInt(bytes.length);
         out.writeBytes(bytes);
     }

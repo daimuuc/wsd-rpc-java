@@ -1,6 +1,6 @@
 package com.dy.rpc.server;
 
-import com.dy.rpc.core.annotation.ServiceScan;
+import com.dy.rpc.core.annotation.RPCServiceScan;
 import com.dy.rpc.core.transport.server.RpcServer;
 import com.dy.rpc.core.transport.server.netty.NettyServer;
 
@@ -10,7 +10,7 @@ import com.dy.rpc.core.transport.server.netty.NettyServer;
  * @Author: chenyibai
  * @Date: 2021/1/20 16:56
  */
-@ServiceScan
+@RPCServiceScan
 public class NettyTestServer {
 
     public static void main(String[] args) {

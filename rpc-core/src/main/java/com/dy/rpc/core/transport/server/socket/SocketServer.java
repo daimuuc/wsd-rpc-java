@@ -4,6 +4,7 @@ import com.dy.rpc.common.enumeration.RpcError;
 import com.dy.rpc.common.exception.RpcException;
 import com.dy.rpc.common.extension.ExtensionLoader;
 import com.dy.rpc.common.factory.ThreadPoolFactory;
+import com.dy.rpc.core.compress.Compress;
 import com.dy.rpc.core.provider.ServiceProvider;
 import com.dy.rpc.core.provider.impl.ServiceProviderImpl;
 import com.dy.rpc.core.registry.ServiceDiscovery;
@@ -33,6 +34,7 @@ public class SocketServer extends AbstractRpcServer {
 
     private final ExecutorService threadPool;
     private CommonSerializer serializer;
+    private Compress compress;
     private RequestHandler requestHandler = new RequestHandler();
 
     public SocketServer(String host, int port) {
@@ -42,6 +44,7 @@ public class SocketServer extends AbstractRpcServer {
         this.serviceRegistry = ExtensionLoader.getExtensionLoader(ServiceRegistry.class).getExtension("serviceRegistry");
         this.serviceProvider = ExtensionLoader.getExtensionLoader(ServiceProvider.class).getExtension("serviceProvider");
         this.serializer = ExtensionLoader.getExtensionLoader(CommonSerializer.class).getExtension("commonSerializer");
+        this.compress = ExtensionLoader.getExtensionLoader(Compress.class).getExtension("compress");
         scanServices();
     }
 
@@ -51,6 +54,10 @@ public class SocketServer extends AbstractRpcServer {
             logger.error("未设置序列化器");
             throw new RpcException(RpcError.SERIALIZER_NOT_FOUND);
         }
+        if (compress == null) {
+            logger.error("未设置（解压）压缩方法");
+            throw new RpcException(RpcError.COMPRESS_NOT_FOUND);
+        }
 
         try (ServerSocket serverSocket = new ServerSocket()) {
             serverSocket.bind(new InetSocketAddress(host, port));
@@ -58,7 +65,7 @@ public class SocketServer extends AbstractRpcServer {
             Socket socket;
             while ((socket = serverSocket.accept()) != null) {
                 logger.info("消费者连接: {}:{}", socket.getInetAddress(), socket.getPort());
-                threadPool.execute(new RequestHandlerThread(socket, requestHandler, serializer));
+                threadPool.execute(new RequestHandlerThread(socket, requestHandler, serializer, compress));
             }
             threadPool.shutdown();
         } catch (IOException e) {

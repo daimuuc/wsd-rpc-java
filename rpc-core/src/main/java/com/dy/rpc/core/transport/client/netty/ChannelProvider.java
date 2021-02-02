@@ -2,6 +2,7 @@ package com.dy.rpc.core.transport.client.netty;
 
 import com.dy.rpc.core.codec.CommonDecoder;
 import com.dy.rpc.core.codec.CommonEncoder;
+import com.dy.rpc.core.compress.Compress;
 import com.dy.rpc.core.serializer.CommonSerializer;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
@@ -23,6 +24,8 @@ import java.util.concurrent.TimeUnit;
 /**
  * 用于获取 Channel 对象
  *
+ * 主要目的：Netty 重用 Channel 避免重复连接服务端
+ *
  * @Author: chenyibai
  * @Date: 2021/1/22 15:47
  */
@@ -35,8 +38,8 @@ public class ChannelProvider {
 
     private static Map<String, Channel> channels = new ConcurrentHashMap<>();
 
-    public static Channel get(InetSocketAddress inetSocketAddress, CommonSerializer serializer) throws InterruptedException {
-        String key = inetSocketAddress.toString() + serializer.getCode();
+    public static Channel get(InetSocketAddress inetSocketAddress, CommonSerializer serializer, Compress compress) throws InterruptedException {
+        String key = inetSocketAddress.toString() + serializer.getCode() + compress.getCode();
         if (channels.containsKey(key)) {
             Channel channel = channels.get(key);
             if(channels != null && channel.isActive()) {
@@ -50,7 +53,7 @@ public class ChannelProvider {
             protected void initChannel(SocketChannel ch) {
                 /*自定义序列化编解码器*/
                 // RpcResponse -> ByteBuf
-                ch.pipeline().addLast(new CommonEncoder(serializer))
+                ch.pipeline().addLast(new CommonEncoder(serializer, compress))
                         .addLast(new IdleStateHandler(0, 5, 0, TimeUnit.SECONDS))
                         .addLast(new CommonDecoder())
                         .addLast(new NettyClientHandler());

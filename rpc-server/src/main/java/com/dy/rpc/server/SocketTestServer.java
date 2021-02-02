@@ -1,6 +1,6 @@
 package com.dy.rpc.server;
 
-import com.dy.rpc.core.annotation.ServiceScan;
+import com.dy.rpc.core.annotation.RPCServiceScan;
 import com.dy.rpc.core.transport.server.RpcServer;
 import com.dy.rpc.core.transport.server.socket.SocketServer;
 
@@ -11,7 +11,7 @@ import com.dy.rpc.core.transport.server.socket.SocketServer;
  * @Date: 2021/1/19 16:16
  */
 // 包扫描。若未指定，则默认扫描该注解标记类所在的包。
-@ServiceScan({"com.dy.rpc.server.service"})
+@RPCServiceScan({"com.dy.rpc.server.service"})
 public class SocketTestServer {
 
     public static void main(String[] args) {

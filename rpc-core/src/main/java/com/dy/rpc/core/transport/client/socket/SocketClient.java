@@ -7,6 +7,7 @@ import com.dy.rpc.common.enumeration.RpcError;
 import com.dy.rpc.common.exception.RpcException;
 import com.dy.rpc.common.extension.ExtensionLoader;
 import com.dy.rpc.common.util.RpcMessageChecker;
+import com.dy.rpc.core.compress.Compress;
 import com.dy.rpc.core.transport.client.RpcClient;
 import com.dy.rpc.core.codec.ObjectReader;
 import com.dy.rpc.core.codec.ObjectWriter;
@@ -26,8 +27,6 @@ import java.net.Socket;
 /**
  * Socket方式远程方法调用的消费者（客户端）
  *
- *
- *
  * @Author: chenyibai
  * @Date: 2021/1/19 15:35
  */
@@ -38,10 +37,12 @@ public class SocketClient implements RpcClient {
 
     private final ServiceDiscovery serviceDiscovery;
     private final CommonSerializer serializer;
+    private final Compress compress;
 
     public SocketClient() {
         this.serviceDiscovery = ExtensionLoader.getExtensionLoader(ServiceDiscovery.class).getExtension("serviceDiscovery");
         this.serializer = ExtensionLoader.getExtensionLoader(CommonSerializer.class).getExtension("commonSerializer");
+        this.compress = ExtensionLoader.getExtensionLoader(Compress.class).getExtension("compress");
     }
 
     @Override
@@ -50,13 +51,17 @@ public class SocketClient implements RpcClient {
             logger.error("未设置序列化器");
             throw new RpcException(RpcError.SERIALIZER_NOT_FOUND);
         }
+        if (compress == null) {
+            logger.error("未设置（解压）压缩方法");
+            throw new RpcException(RpcError.COMPRESS_NOT_FOUND);
+        }
 
         InetSocketAddress inetSocketAddress = serviceDiscovery.lookupService(rpcRequest.getInterfaceName());
         try (Socket socket = new Socket()) {
             socket.connect(inetSocketAddress);
             OutputStream outputStream = socket.getOutputStream();
             InputStream inputStream = socket.getInputStream();
-            ObjectWriter.writeObject(outputStream, rpcRequest, serializer);
+            ObjectWriter.writeObject(outputStream, rpcRequest, serializer, compress);
             Object obj = ObjectReader.readObject(inputStream);
             RpcResponse rpcResponse = (RpcResponse) obj;
             if (rpcResponse == null) {

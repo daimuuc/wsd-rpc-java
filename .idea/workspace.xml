@@ -5,23 +5,72 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3da4bc02-fe09-40d3-984a-147297ad0eb1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/loadbalancer/impl/ConsistentHashLoadBalancer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_snappy_snappy_java_1_1_8_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/dy/rpc/common/enumeration/CompressCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/compress/Compress.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/compress/impl/GzipCompress.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/compress/impl/SnappyCompress.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/resources/META-INF/extensions/com.dy.rpc.core.compress.Compress" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-common/src/main/java/com/dy/rpc/common/util/NacosUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/dy/rpc/common/util/NacosUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-common/target/classes/com/dy/rpc/common/util/NacosUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/target/classes/com/dy/rpc/common/util/NacosUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/loadbalancer/AbstractLoadBalancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/loadbalancer/AbstractLoadBalancer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/loadbalancer/CommonLoadBalancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/loadbalancer/CommonLoadBalancer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/loadbalancer/impl/PollingLoadBalancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/loadbalancer/impl/PollingLoadBalancer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/loadbalancer/impl/RandomLoadBalancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/loadbalancer/impl/RandomLoadBalancer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/registry/impl/NacosServiceDiscovery.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/registry/impl/NacosServiceDiscovery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/resources/META-INF/extensions/com.dy.rpc.core.loadbalancer.CommonLoadBalancer" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/resources/META-INF/extensions/com.dy.rpc.core.loadbalancer.CommonLoadBalancer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/META-INF/extensions/com.dy.rpc.core.loadbalancer.CommonLoadBalancer" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/META-INF/extensions/com.dy.rpc.core.loadbalancer.CommonLoadBalancer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/loadbalancer/AbstractLoadBalancer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/loadbalancer/AbstractLoadBalancer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/loadbalancer/CommonLoadBalancer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/loadbalancer/CommonLoadBalancer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/loadbalancer/impl/PollingLoadBalancer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/loadbalancer/impl/PollingLoadBalancer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/loadbalancer/impl/RandomLoadBalancer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/loadbalancer/impl/RandomLoadBalancer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/registry/impl/NacosServiceDiscovery.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/registry/impl/NacosServiceDiscovery.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-client/rpc-client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-client/rpc-client.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-client/src/main/java/com/dy/rpc/client/SocketTestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-client/src/main/java/com/dy/rpc/client/SocketTestClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-client/target/classes/com/dy/rpc/client/SocketTestClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-client/target/classes/com/dy/rpc/client/SocketTestClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-common/src/main/java/com/dy/rpc/common/enumeration/RpcError.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/dy/rpc/common/enumeration/RpcError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-common/target/classes/com/dy/rpc/common/enumeration/RpcError.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/target/classes/com/dy/rpc/common/enumeration/RpcError.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/rpc-core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/rpc-core.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/annotation/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/annotation/RPCService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/annotation/ServiceScan.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/annotation/RPCServiceScan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/codec/CommonDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/codec/CommonDecoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/codec/CommonEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/codec/CommonEncoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/codec/ObjectReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/codec/ObjectReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/codec/ObjectWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/codec/ObjectWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/hook/ShutdownHook.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/hook/ShutdownHook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/loadbalancer/impl/ConsistentHashLoadBalancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/loadbalancer/impl/ConsistentHashLoadBalancer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/serializer/impl/HessianSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/serializer/impl/HessianSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/serializer/impl/JsonSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/serializer/impl/JsonSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/serializer/impl/KryoSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/serializer/impl/KryoSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/serializer/impl/ProtobufSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/serializer/impl/ProtobufSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/client/netty/ChannelProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/client/netty/ChannelProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/client/netty/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/client/netty/NettyClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/client/netty/NettyClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/client/netty/NettyClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/client/socket/SocketClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/client/socket/SocketClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/server/AbstractRpcServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/server/AbstractRpcServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/server/RequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/server/RequestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/server/netty/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/server/netty/NettyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/server/socket/RequestHandlerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/server/socket/RequestHandlerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/server/socket/SocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/server/socket/SocketServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/resources/META-INF/extensions/com.dy.rpc.core.serializer.CommonSerializer" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/resources/META-INF/extensions/com.dy.rpc.core.serializer.CommonSerializer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/annotation/Service.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/annotation/ServiceScan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/codec/CommonDecoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/codec/CommonDecoder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/codec/CommonEncoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/codec/CommonEncoder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/codec/ObjectReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/codec/ObjectReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/codec/ObjectWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/codec/ObjectWriter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/loadbalancer/impl/ConsistentHashLoadBalancer$ConsistentHashSelector.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/loadbalancer/impl/ConsistentHashLoadBalancer$ConsistentHashSelector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/loadbalancer/impl/ConsistentHashLoadBalancer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/loadbalancer/impl/ConsistentHashLoadBalancer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/client/netty/ChannelProvider$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/client/netty/ChannelProvider$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/client/netty/ChannelProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/client/netty/ChannelProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/client/netty/NettyClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/client/netty/NettyClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/client/netty/NettyClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/client/netty/NettyClientHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/client/socket/SocketClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/client/socket/SocketClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/server/AbstractRpcServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/server/AbstractRpcServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/server/netty/NettyServer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/server/netty/NettyServer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/server/netty/NettyServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/server/netty/NettyServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/server/socket/RequestHandlerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/server/socket/RequestHandlerThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/server/socket/SocketServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/server/socket/SocketServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-server/rpc-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/rpc-server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-server/src/main/java/com/dy/rpc/server/NettyTestServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/src/main/java/com/dy/rpc/server/NettyTestServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-server/src/main/java/com/dy/rpc/server/SocketTestServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/src/main/java/com/dy/rpc/server/SocketTestServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-server/src/main/java/com/dy/rpc/server/service/ByeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/src/main/java/com/dy/rpc/server/service/ByeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-server/src/main/java/com/dy/rpc/server/service/HelloServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/src/main/java/com/dy/rpc/server/service/HelloServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-server/src/main/java/com/dy/rpc/server/service/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/src/main/java/com/dy/rpc/server/service/StudentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-server/target/classes/com/dy/rpc/server/NettyTestServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/target/classes/com/dy/rpc/server/NettyTestServer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc-server/target/classes/com/dy/rpc/server/SocketTestServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/target/classes/com/dy/rpc/server/SocketTestServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-server/target/classes/com/dy/rpc/server/service/ByeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/target/classes/com/dy/rpc/server/service/ByeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-server/target/classes/com/dy/rpc/server/service/HelloServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/target/classes/com/dy/rpc/server/service/HelloServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-server/target/classes/com/dy/rpc/server/service/StudentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/target/classes/com/dy/rpc/server/service/StudentServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +83,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="AnnotationType" />
         <option value="Class" />
       </list>
@@ -53,12 +102,14 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/rpc-core/src/main/resources/META-INF/extensions" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2677071" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JSON" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -119,15 +170,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -201,7 +250,8 @@
       <workItem from="1611546880534" duration="894000" />
       <workItem from="1611550521253" duration="4329000" />
       <workItem from="1611558539312" duration="14664000" />
-      <workItem from="1611644051054" duration="21736000" />
+      <workItem from="1611644051054" duration="27660000" />
+      <workItem from="1612146642530" duration="27639000" />
     </task>
     <servers />
   </component>
@@ -230,25 +280,29 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/loadbalancer/impl/ConsistentHashLoadBalancer.java</url>
-          <line>24</line>
+          <line>26</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/loadbalancer/impl/ConsistentHashLoadBalancer.java</url>
-          <line>43</line>
+          <line>45</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/loadbalancer/impl/ConsistentHashLoadBalancer.java</url>
-          <line>58</line>
+          <line>60</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/loadbalancer/impl/ConsistentHashLoadBalancer.java</url>
-          <line>80</line>
+          <line>82</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

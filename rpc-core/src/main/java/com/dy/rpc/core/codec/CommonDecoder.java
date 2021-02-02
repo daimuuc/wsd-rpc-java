@@ -5,6 +5,7 @@ import com.dy.rpc.common.entity.RpcResponse;
 import com.dy.rpc.common.enumeration.PackageType;
 import com.dy.rpc.common.enumeration.RpcError;
 import com.dy.rpc.common.exception.RpcException;
+import com.dy.rpc.core.compress.Compress;
 import com.dy.rpc.core.serializer.CommonSerializer;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
@@ -48,9 +49,16 @@ public class CommonDecoder extends ReplayingDecoder {
             logger.error("不识别的反序列化器: {}", serializerCode);
             throw new RpcException(RpcError.UNKNOWN_SERIALIZER);
         }
+        int compressCode = in.readInt();
+        Compress compress = Compress.getByCode(compressCode);
+        if (compress == null) {
+            logger.error("不识别的(解压)压缩方法: {}", compressCode);
+            throw new RpcException(RpcError.UNKNOWN_COMPRESS);
+        }
         int length = in.readInt();
         byte[] bytes = new byte[length];
         in.readBytes(bytes);
+        bytes = compress.decompress(bytes);
         Object obj = serializer.deserialize(bytes, packageClass);
         out.add(obj);
     }

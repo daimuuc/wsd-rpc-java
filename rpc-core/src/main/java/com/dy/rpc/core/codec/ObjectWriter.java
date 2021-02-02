@@ -2,6 +2,7 @@ package com.dy.rpc.core.codec;
 
 import com.dy.rpc.common.entity.RpcRequest;
 import com.dy.rpc.common.enumeration.PackageType;
+import com.dy.rpc.core.compress.Compress;
 import com.dy.rpc.core.serializer.CommonSerializer;
 
 import java.io.IOException;
@@ -15,7 +16,7 @@ public class ObjectWriter {
 
     private static final int MAGIC_NUMBER = 0xCAFEBABE;
 
-    public static void writeObject(OutputStream outputStream, Object object, CommonSerializer serializer) throws IOException {
+    public static void writeObject(OutputStream outputStream, Object object, CommonSerializer serializer, Compress compress) throws IOException {
 
         outputStream.write(intToBytes(MAGIC_NUMBER));
         if (object instanceof RpcRequest) {
@@ -24,7 +25,9 @@ public class ObjectWriter {
             outputStream.write(intToBytes(PackageType.RESPONSE_PACK.getCode()));
         }
         outputStream.write(intToBytes(serializer.getCode()));
+        outputStream.write(intToBytes(compress.getCode()));
         byte[] bytes = serializer.serialize(object);
+        bytes = compress.compress(bytes);
         outputStream.write(intToBytes(bytes.length));
         outputStream.write(bytes);
         outputStream.flush();

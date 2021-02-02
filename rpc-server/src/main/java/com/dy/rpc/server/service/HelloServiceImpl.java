@@ -2,7 +2,7 @@ package com.dy.rpc.server.service;
 
 import com.dy.rpc.api.HelloObject;
 import com.dy.rpc.api.HelloService;
-import com.dy.rpc.core.annotation.Service;
+import com.dy.rpc.core.annotation.RPCService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
  * @Author: chenyibai
  * @Date: 2021/1/19 16:17
  */
-@Service
+@RPCService
 public class HelloServiceImpl implements HelloService {
 
     private static final Logger logger = LoggerFactory.getLogger(HelloServiceImpl.class);

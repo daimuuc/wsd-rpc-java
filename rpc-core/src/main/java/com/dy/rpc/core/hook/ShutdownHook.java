@@ -2,6 +2,7 @@ package com.dy.rpc.core.hook;
 
 import com.dy.rpc.common.factory.ThreadPoolFactory;
 import com.dy.rpc.common.util.NacosUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -9,6 +10,7 @@ import org.slf4j.LoggerFactory;
  * @Author: chenyibai
  * @Date: 2021/1/22 16:17
  */
+@Slf4j
 public class ShutdownHook {
 
     private static final Logger logger = LoggerFactory.getLogger(ShutdownHook.class);

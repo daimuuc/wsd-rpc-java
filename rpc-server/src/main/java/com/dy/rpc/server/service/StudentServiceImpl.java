@@ -2,13 +2,13 @@ package com.dy.rpc.server.service;
 
 import com.dy.rpc.api.Student;
 import com.dy.rpc.api.StudentService;
-import com.dy.rpc.core.annotation.Service;
+import com.dy.rpc.core.annotation.RPCService;
 
 /**
  * @Author: chenyibai
  * @Date: 2021/1/20 11:08
  */
-@Service
+@RPCService
 public class StudentServiceImpl implements StudentService {
 
     public Student getInfo() {

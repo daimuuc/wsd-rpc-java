@@ -1,1 +1,1 @@
-commonSerializer=com.dy.rpc.core.serializer.impl.KryoSerializer
+commonSerializer=com.dy.rpc.core.serializer.impl.ProtobufSerializer

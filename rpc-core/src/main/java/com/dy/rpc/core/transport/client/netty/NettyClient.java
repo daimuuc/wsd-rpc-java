@@ -6,6 +6,7 @@ import com.dy.rpc.common.enumeration.RpcError;
 import com.dy.rpc.common.exception.RpcException;
 import com.dy.rpc.common.extension.ExtensionLoader;
 import com.dy.rpc.common.factory.SingletonFactory;
+import com.dy.rpc.core.compress.Compress;
 import com.dy.rpc.core.registry.ServiceDiscovery;
 import com.dy.rpc.core.registry.impl.NacosServiceDiscovery;
 import com.dy.rpc.core.serializer.CommonSerializer;
@@ -43,12 +44,14 @@ public class NettyClient implements RpcClient {
 
     private final ServiceDiscovery serviceDiscovery;
     private final CommonSerializer serializer;
+    private final Compress compress;
 
     private final UnprocessedRequests unprocessedRequests;
 
     public NettyClient() {
         this.serviceDiscovery = ExtensionLoader.getExtensionLoader(ServiceDiscovery.class).getExtension("serviceDiscovery");
         this.serializer = ExtensionLoader.getExtensionLoader(CommonSerializer.class).getExtension("commonSerializer");
+        this.compress = ExtensionLoader.getExtensionLoader(Compress.class).getExtension("compress");
         this.unprocessedRequests = SingletonFactory.getInstance(UnprocessedRequests.class);
     }
 
@@ -58,11 +61,15 @@ public class NettyClient implements RpcClient {
             logger.error("未设置序列化器");
             throw new RpcException(RpcError.SERIALIZER_NOT_FOUND);
         }
+        if (compress == null) {
+            logger.error("未设置（解压）压缩方法");
+            throw new RpcException(RpcError.COMPRESS_NOT_FOUND);
+        }
 
         CompletableFuture<RpcResponse> resultFuture = new CompletableFuture<>();
         try {
             InetSocketAddress inetSocketAddress = serviceDiscovery.lookupService(rpcRequest.getInterfaceName());
-            Channel channel = ChannelProvider.get(inetSocketAddress, serializer);
+            Channel channel = ChannelProvider.get(inetSocketAddress, serializer, compress);
             if (!channel.isActive()) {
                 group.shutdownGracefully();
                 return null;
