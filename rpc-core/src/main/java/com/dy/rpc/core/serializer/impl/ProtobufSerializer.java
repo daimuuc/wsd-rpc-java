@@ -1,6 +1,5 @@
 package com.dy.rpc.core.serializer.impl;
 
-import com.dy.rpc.common.enumeration.SerializerCode;
 import com.dy.rpc.core.serializer.CommonSerializer;
 import io.protostuff.LinkedBuffer;
 import io.protostuff.ProtostuffIOUtil;

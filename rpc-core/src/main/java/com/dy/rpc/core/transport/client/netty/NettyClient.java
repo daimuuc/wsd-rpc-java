@@ -2,13 +2,12 @@ package com.dy.rpc.core.transport.client.netty;
 
 import com.dy.rpc.common.entity.RpcRequest;
 import com.dy.rpc.common.entity.RpcResponse;
-import com.dy.rpc.common.enumeration.RpcError;
+import com.dy.rpc.common.enums.RpcError;
 import com.dy.rpc.common.exception.RpcException;
 import com.dy.rpc.common.extension.ExtensionLoader;
 import com.dy.rpc.common.factory.SingletonFactory;
 import com.dy.rpc.core.compress.Compress;
 import com.dy.rpc.core.registry.ServiceDiscovery;
-import com.dy.rpc.core.registry.impl.NacosServiceDiscovery;
 import com.dy.rpc.core.serializer.CommonSerializer;
 import com.dy.rpc.core.transport.client.RpcClient;
 import io.netty.bootstrap.Bootstrap;

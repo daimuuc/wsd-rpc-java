@@ -1,1 +1,1 @@
-serviceRegistry=com.dy.rpc.core.registry.impl.NacosServiceRegistry
+serviceRegistry=com.dy.rpc.core.registry.impl.zk.ZkServiceRegistry

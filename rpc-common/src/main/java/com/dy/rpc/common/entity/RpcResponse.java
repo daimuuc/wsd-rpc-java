@@ -1,6 +1,6 @@
 package com.dy.rpc.common.entity;
 
-import com.dy.rpc.common.enumeration.ResponseCode;
+import com.dy.rpc.common.enums.ResponseCode;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

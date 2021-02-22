@@ -83,6 +83,14 @@
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.10" level="project" />
     <orderEntry type="library" name="Maven: io.prometheus:simpleclient:0.5.0" level="project" />
     <orderEntry type="library" name="Maven: org.xerial.snappy:snappy-java:1.1.8.4" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.curator:curator-framework:4.2.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.curator:curator-client:4.2.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.zookeeper:zookeeper:3.5.4-beta" level="project" />
+    <orderEntry type="library" name="Maven: commons-cli:commons-cli:1.2" level="project" />
+    <orderEntry type="library" name="Maven: log4j:log4j:1.2.17" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.yetus:audience-annotations:0.5.0" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty:3.10.6.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.curator:curator-recipes:4.2.0" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.12" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-simple:1.7.30" level="project" />

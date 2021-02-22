@@ -2,8 +2,8 @@ package com.dy.rpc.core.codec;
 
 import com.dy.rpc.common.entity.RpcRequest;
 import com.dy.rpc.common.entity.RpcResponse;
-import com.dy.rpc.common.enumeration.PackageType;
-import com.dy.rpc.common.enumeration.RpcError;
+import com.dy.rpc.common.enums.PackageType;
+import com.dy.rpc.common.enums.RpcError;
 import com.dy.rpc.common.exception.RpcException;
 import com.dy.rpc.core.compress.Compress;
 import com.dy.rpc.core.serializer.CommonSerializer;

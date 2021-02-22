@@ -1,8 +1,10 @@
 package com.dy.rpc.core.hook;
 
 import com.dy.rpc.common.factory.ThreadPoolFactory;
-import com.dy.rpc.common.util.NacosUtil;
+import com.dy.rpc.common.utils.NacosUtil;
+import com.dy.rpc.core.registry.impl.zk.util.CuratorUtils;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.curator.framework.CuratorFramework;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,6 +26,7 @@ public class ShutdownHook {
     public void addClearAllHook() {
         logger.info("关闭后将自动注销所有服务");
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            CuratorUtils.clearRegistry();
             NacosUtil.clearRegistry();
             ThreadPoolFactory.shutDownAll();
         }));

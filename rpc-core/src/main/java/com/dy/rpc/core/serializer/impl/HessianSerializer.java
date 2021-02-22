@@ -2,7 +2,6 @@ package com.dy.rpc.core.serializer.impl;
 
 import com.caucho.hessian.io.HessianInput;
 import com.caucho.hessian.io.HessianOutput;
-import com.dy.rpc.common.enumeration.SerializerCode;
 import com.dy.rpc.common.exception.SerializeException;
 import com.dy.rpc.core.serializer.CommonSerializer;
 import lombok.extern.slf4j.Slf4j;

@@ -1,15 +1,13 @@
 package com.dy.rpc.core.transport.server.socket;
 
-import com.dy.rpc.common.enumeration.RpcError;
+import com.dy.rpc.common.enums.RpcError;
 import com.dy.rpc.common.exception.RpcException;
 import com.dy.rpc.common.extension.ExtensionLoader;
 import com.dy.rpc.common.factory.ThreadPoolFactory;
 import com.dy.rpc.core.compress.Compress;
+import com.dy.rpc.core.hook.ShutdownHook;
 import com.dy.rpc.core.provider.ServiceProvider;
-import com.dy.rpc.core.provider.impl.ServiceProviderImpl;
-import com.dy.rpc.core.registry.ServiceDiscovery;
 import com.dy.rpc.core.registry.ServiceRegistry;
-import com.dy.rpc.core.registry.impl.NacosServiceRegistry;
 import com.dy.rpc.core.serializer.CommonSerializer;
 import com.dy.rpc.core.transport.server.RequestHandler;
 import com.dy.rpc.core.transport.server.AbstractRpcServer;
@@ -59,6 +57,7 @@ public class SocketServer extends AbstractRpcServer {
             throw new RpcException(RpcError.COMPRESS_NOT_FOUND);
         }
 
+        ShutdownHook.getShutdownHook().addClearAllHook();
         try (ServerSocket serverSocket = new ServerSocket()) {
             serverSocket.bind(new InetSocketAddress(host, port));
             logger.info("服务器启动……");

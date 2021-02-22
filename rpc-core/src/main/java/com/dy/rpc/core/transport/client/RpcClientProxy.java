@@ -2,7 +2,7 @@ package com.dy.rpc.core.transport.client;
 
 import com.dy.rpc.common.entity.RpcRequest;
 import com.dy.rpc.common.entity.RpcResponse;
-import com.dy.rpc.common.util.RpcMessageChecker;
+import com.dy.rpc.common.utils.RpcMessageChecker;
 import com.dy.rpc.core.transport.client.netty.NettyClient;
 import com.dy.rpc.core.transport.client.socket.SocketClient;
 import lombok.extern.slf4j.Slf4j;

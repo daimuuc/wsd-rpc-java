@@ -1,6 +1,6 @@
 package com.dy.rpc.core.provider.impl;
 
-import com.dy.rpc.common.enumeration.RpcError;
+import com.dy.rpc.common.enums.RpcError;
 import com.dy.rpc.common.exception.RpcException;
 import com.dy.rpc.core.provider.ServiceProvider;
 import org.slf4j.Logger;

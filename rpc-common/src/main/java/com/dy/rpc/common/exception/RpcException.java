@@ -1,6 +1,6 @@
 package com.dy.rpc.common.exception;
 
-import com.dy.rpc.common.enumeration.RpcError;
+import com.dy.rpc.common.enums.RpcError;
 
 /**
  * @Author: chenyibai

@@ -1,6 +1,5 @@
 package com.dy.rpc.core.compress.impl;
 
-import com.dy.rpc.common.enumeration.CompressCode;
 import com.dy.rpc.core.compress.Compress;
 import org.xerial.snappy.Snappy;
 

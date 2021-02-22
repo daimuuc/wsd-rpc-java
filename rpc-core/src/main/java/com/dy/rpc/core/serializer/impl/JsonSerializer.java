@@ -1,7 +1,6 @@
 package com.dy.rpc.core.serializer.impl;
 
 import com.dy.rpc.common.entity.RpcRequest;
-import com.dy.rpc.common.enumeration.SerializerCode;
 import com.dy.rpc.common.exception.SerializeException;
 import com.dy.rpc.core.serializer.CommonSerializer;
 import com.fasterxml.jackson.core.JsonProcessingException;
