@@ -6,10 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="3da4bc02-fe09-40d3-984a-147297ad0eb1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-client/src/main/resources/rpc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-client/src/main/resources/rpc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-client/target/classes/rpc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-client/target/classes/rpc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/registry/impl/zk/util/CuratorUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/registry/impl/zk/util/CuratorUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc-core/src/main/resources/META-INF/extensions/com.dy.rpc.core.registry.ServiceDiscovery" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/resources/META-INF/extensions/com.dy.rpc.core.registry.ServiceDiscovery" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc-core/src/main/resources/META-INF/extensions/com.dy.rpc.core.registry.ServiceRegistry" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/resources/META-INF/extensions/com.dy.rpc.core.registry.ServiceRegistry" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/META-INF/extensions/com.dy.rpc.core.registry.ServiceDiscovery" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/META-INF/extensions/com.dy.rpc.core.registry.ServiceDiscovery" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/META-INF/extensions/com.dy.rpc.core.registry.ServiceRegistry" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/META-INF/extensions/com.dy.rpc.core.registry.ServiceRegistry" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/registry/impl/zk/util/CuratorUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/registry/impl/zk/util/CuratorUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-server/src/main/resources/rpc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/src/main/resources/rpc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-server/target/classes/rpc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/target/classes/rpc.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +37,10 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://E:/maven_repo/org/apache/curator/curator-framework/4.2.0/curator-framework-4.2.0.jar!/org/apache/curator/framework/imps/CreateBuilderImpl.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://E:/maven_repo/org/apache/curator/curator-framework/4.2.0/curator-framework-4.2.0-sources.jar!/org/apache/curator/framework/imps/CreateBuilderImpl.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1nGpOjTQlvrVSDTGHM5Fk0RuDMG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -67,7 +77,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SocketTestClient">
+  <component name="RunManager" selected="Application.NettyTestClient">
     <configuration name="NettyTestClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.dy.rpc.client.NettyTestClient" />
       <module name="rpc-client" />
@@ -164,10 +174,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SocketTestClient" />
-        <item itemvalue="Application.SocketTestServer" />
         <item itemvalue="Application.NettyTestClient" />
         <item itemvalue="Application.NettyTestServer" />
+        <item itemvalue="Application.SocketTestClient" />
+        <item itemvalue="Application.SocketTestServer" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +214,7 @@
       <workItem from="1613802817650" duration="3650000" />
       <workItem from="1613807226695" duration="2602000" />
       <workItem from="1613809866564" duration="16997000" />
-      <workItem from="1614051066120" duration="2877000" />
+      <workItem from="1614051066120" duration="9476000" />
     </task>
     <servers />
   </component>
@@ -280,6 +290,21 @@
           <url>file://$PROJECT_DIR$/rpc-common/src/main/java/com/dy/rpc/common/extension/ExtensionLoader.java</url>
           <line>98</line>
           <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/registry/impl/zk/util/CuratorUtils.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/registry/impl/zk/util/CuratorUtils.java</url>
+          <line>104</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/rpc-common/src/main/java/com/dy/rpc/common/utils/PropertiesFileUtil.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
