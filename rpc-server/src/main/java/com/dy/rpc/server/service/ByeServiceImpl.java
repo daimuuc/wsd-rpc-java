@@ -7,7 +7,7 @@ import com.dy.rpc.core.annotation.RPCService;
  * @Author: chenyibai
  * @Date: 2021/1/22 17:50
  */
-@RPCService
+@RPCService(group = "group_1", version = "version_1.0")
 public class ByeServiceImpl implements ByeService {
 
     @Override

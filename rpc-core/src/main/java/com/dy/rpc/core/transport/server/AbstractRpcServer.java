@@ -5,6 +5,7 @@ import com.dy.rpc.common.exception.RpcException;
 import com.dy.rpc.common.utils.ReflectUtil;
 import com.dy.rpc.core.annotation.RPCService;
 import com.dy.rpc.core.annotation.RPCServiceScan;
+import com.dy.rpc.core.properties.RpcServiceProperties;
 import com.dy.rpc.core.provider.ServiceProvider;
 import com.dy.rpc.core.registry.ServiceRegistry;
 import org.slf4j.Logger;
@@ -49,7 +50,7 @@ public abstract class AbstractRpcServer implements RpcServer {
         Set<Class<?>> classSet = ReflectUtil.getAllClasses(packageNameNum);
         for(Class<?> clazz : classSet) {
             if(clazz.isAnnotationPresent(RPCService.class)) {
-                String serviceName = clazz.getAnnotation(RPCService.class).value();
+                RPCService rpcService = clazz.getAnnotation(RPCService.class);
                 Object obj;
                 try {
                     obj = clazz.newInstance();
@@ -57,12 +58,12 @@ public abstract class AbstractRpcServer implements RpcServer {
                     logger.error("创建 " + clazz + " 时有错误发生");
                     continue;
                 }
-                if("".equals(serviceName)) {
-                    Class<?>[] interfaces = clazz.getInterfaces();
-                    for (Class<?> oneInterface: interfaces){
-                        publishService(obj, oneInterface.getCanonicalName());
-                    }
-                } else {
+                Class<?>[] interfaces = clazz.getInterfaces();
+                for (Class<?> oneInterface: interfaces){
+                    RpcServiceProperties rpcServiceProperties = RpcServiceProperties.builder()
+                            .serviceName(oneInterface.getCanonicalName()).group(rpcService.group())
+                            .version(rpcService.version()).build();
+                    String serviceName = rpcServiceProperties.toString();
                     publishService(obj, serviceName);
                 }
             }

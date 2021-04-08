@@ -1,11 +1,10 @@
 package com.dy.rpc.client;
 
 import com.dy.rpc.api.*;
+import com.dy.rpc.core.properties.RpcServiceProperties;
 import com.dy.rpc.core.transport.client.RpcClient;
 import com.dy.rpc.core.transport.client.RpcClientProxy;
 import com.dy.rpc.core.transport.client.netty.NettyClient;
-import com.dy.rpc.core.loadbalancer.CommonLoadBalancer;
-import com.dy.rpc.core.serializer.CommonSerializer;
 
 /**
  * @Author: chenyibai
@@ -15,7 +14,9 @@ public class NettyTestClient {
 
     public static void main(String[] args) {
         RpcClient client = new NettyClient();
-        RpcClientProxy proxy = new RpcClientProxy(client);
+        RpcServiceProperties rpcServiceProperties = RpcServiceProperties.builder()
+                .group("group_2").version("version_1.0").build();
+        RpcClientProxy proxy = new RpcClientProxy(client, rpcServiceProperties);
 
         HelloService helloService = proxy.getProxy(HelloService.class);
         HelloObject object = new HelloObject(12, "This is a message");

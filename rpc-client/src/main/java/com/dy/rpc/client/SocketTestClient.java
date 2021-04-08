@@ -1,6 +1,7 @@
 package com.dy.rpc.client;
 
 import com.dy.rpc.api.*;
+import com.dy.rpc.core.properties.RpcServiceProperties;
 import com.dy.rpc.core.transport.client.RpcClient;
 import com.dy.rpc.core.transport.client.RpcClientProxy;
 import com.dy.rpc.core.transport.client.socket.SocketClient;
@@ -13,7 +14,9 @@ public class SocketTestClient {
 
     public static void main(String[] args) {
         RpcClient client = new SocketClient();
-        RpcClientProxy proxy = new RpcClientProxy(client);
+        RpcServiceProperties rpcServiceProperties = RpcServiceProperties.builder()
+                .group("group_1").version("version_1.0").build();
+        RpcClientProxy proxy = new RpcClientProxy(client, rpcServiceProperties);
 
         HelloService helloService = proxy.getProxy(HelloService.class);
         HelloObject object = new HelloObject(12, "This is a message");

@@ -3,6 +3,7 @@ package com.dy.rpc.core.transport.client;
 import com.dy.rpc.common.entity.RpcRequest;
 import com.dy.rpc.common.entity.RpcResponse;
 import com.dy.rpc.common.utils.RpcMessageChecker;
+import com.dy.rpc.core.properties.RpcServiceProperties;
 import com.dy.rpc.core.transport.client.netty.NettyClient;
 import com.dy.rpc.core.transport.client.socket.SocketClient;
 import lombok.extern.slf4j.Slf4j;
@@ -27,9 +28,11 @@ public class RpcClientProxy implements InvocationHandler {
     private static final Logger logger = LoggerFactory.getLogger(RpcClientProxy.class);
 
     private final RpcClient client;
+    private final RpcServiceProperties rpcServiceProperties;
 
-    public RpcClientProxy(RpcClient client) {
+    public RpcClientProxy(RpcClient client, RpcServiceProperties rpcServiceProperties) {
         this.client = client;
+        this.rpcServiceProperties = rpcServiceProperties;
     }
 
     @SuppressWarnings("unchecked")
@@ -39,8 +42,10 @@ public class RpcClientProxy implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) {
-        logger.info("调用方法: {}#{}", method.getDeclaringClass().getName(), method.getName());
-        RpcRequest rpcRequest = new RpcRequest(UUID.randomUUID().toString(), method.getDeclaringClass().getName(),
+        rpcServiceProperties.setServiceName(method.getDeclaringClass().getName());
+        String serviceName = rpcServiceProperties.toString();
+        logger.info("调用方法: {}#{}", serviceName, method.getName());
+        RpcRequest rpcRequest = new RpcRequest(UUID.randomUUID().toString(), serviceName,
                 method.getName(), args, method.getParameterTypes(), false);
 
         RpcResponse rpcResponse = null;
