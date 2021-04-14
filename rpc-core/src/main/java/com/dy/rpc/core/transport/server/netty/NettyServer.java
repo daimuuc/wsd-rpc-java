@@ -7,10 +7,8 @@ import com.dy.rpc.core.codec.CommonDecoder;
 import com.dy.rpc.core.codec.CommonEncoder;
 import com.dy.rpc.core.compress.Compress;
 import com.dy.rpc.core.hook.ShutdownHook;
-import com.dy.rpc.core.provider.ServiceProvider;
-import com.dy.rpc.core.registry.ServiceRegistry;
 import com.dy.rpc.core.serializer.CommonSerializer;
-import com.dy.rpc.core.transport.server.AbstractRpcServer;
+import com.dy.rpc.core.transport.server.RpcServer;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -19,8 +17,10 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 import io.netty.handler.timeout.IdleStateHandler;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 import java.util.concurrent.TimeUnit;
 
@@ -30,20 +30,20 @@ import java.util.concurrent.TimeUnit;
  * @Author: chenyibai
  * @Date: 2021/1/20 16:57
  */
-public class NettyServer extends AbstractRpcServer {
+@Slf4j
+@Component
+public class NettyServer implements RpcServer {
     private static final Logger logger = LoggerFactory.getLogger(NettyServer.class);
+
+    private String host = "127.0.0.1";
+    private int port = 9999;
 
     private CommonSerializer serializer;
     private Compress compress;
 
-    public NettyServer(String host, int port) {
-        this.host = host;
-        this.port = port;
-        this.serviceRegistry = ExtensionLoader.getExtensionLoader(ServiceRegistry.class).getExtension("serviceRegistry");
-        this.serviceProvider = ExtensionLoader.getExtensionLoader(ServiceProvider.class).getExtension("serviceProvider");
+    public NettyServer() {
         this.serializer = ExtensionLoader.getExtensionLoader(CommonSerializer.class).getExtension("commonSerializer");
         this.compress = ExtensionLoader.getExtensionLoader(Compress.class).getExtension("compress");
-        scanServices();
     }
 
     @Override
@@ -78,7 +78,7 @@ public class NettyServer extends AbstractRpcServer {
                             pipeline.addLast(new NettyServerHandler());
                         }
                     });
-            ChannelFuture future = serverBootstrap.bind(port).sync();
+            ChannelFuture future = serverBootstrap.bind(host, port).sync();
             future.channel().closeFuture().sync();
         } catch (InterruptedException e) {
             logger.error("启动服务器时有错误发生: ", e);

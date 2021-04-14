@@ -10,9 +10,11 @@ import com.dy.rpc.core.provider.ServiceProvider;
 import com.dy.rpc.core.registry.ServiceRegistry;
 import com.dy.rpc.core.serializer.CommonSerializer;
 import com.dy.rpc.core.transport.server.RequestHandler;
-import com.dy.rpc.core.transport.server.AbstractRpcServer;
+import com.dy.rpc.core.transport.server.RpcServer;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -26,24 +28,23 @@ import java.util.concurrent.*;
  * @Author: chenyibai
  * @Date: 2021/1/19 15:41
  */
-public class SocketServer extends AbstractRpcServer {
+@Slf4j
+@Component
+public class SocketServer implements RpcServer {
 
     private static final Logger logger = LoggerFactory.getLogger(SocketServer.class);
 
+    private String host = "127.0.0.1";
+    private int port = 9999;
     private final ExecutorService threadPool;
     private CommonSerializer serializer;
     private Compress compress;
     private RequestHandler requestHandler = new RequestHandler();
 
-    public SocketServer(String host, int port) {
-        this.host = host;
-        this.port = port;
+    public SocketServer() {
         threadPool = ThreadPoolFactory.createDefaultThreadPool("socket-rpc-server");
-        this.serviceRegistry = ExtensionLoader.getExtensionLoader(ServiceRegistry.class).getExtension("serviceRegistry");
-        this.serviceProvider = ExtensionLoader.getExtensionLoader(ServiceProvider.class).getExtension("serviceProvider");
         this.serializer = ExtensionLoader.getExtensionLoader(CommonSerializer.class).getExtension("commonSerializer");
         this.compress = ExtensionLoader.getExtensionLoader(Compress.class).getExtension("compress");
-        scanServices();
     }
 
     @Override

@@ -3,7 +3,7 @@ package com.dy.rpc.core.annotation;
 import java.lang.annotation.*;
 
 /**
- * 表示一个服务提供类，用于远程接口的实现类
+ * 表示一个服务提供类，用于远程接口的实现类，即用于服务端
  *
  * @Author: chenyibai
  * @Date: 2021/1/20 11:50
