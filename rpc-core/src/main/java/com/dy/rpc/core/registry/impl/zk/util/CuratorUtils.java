@@ -1,6 +1,5 @@
 package com.dy.rpc.core.registry.impl.zk.util;
 
-import com.dy.rpc.common.enums.RpcConfigEnum;
 import com.dy.rpc.common.utils.PropertiesFileUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.curator.RetryPolicy;
@@ -102,9 +101,9 @@ public class CuratorUtils {
 
     public static CuratorFramework getZkClient() {
         // check if user has set zk address
-        Properties properties = PropertiesFileUtil.readPropertiesFile(RpcConfigEnum.RPC_CONFIG_PATH.getPropertyValue());
+        Properties properties = PropertiesFileUtil.readPropertiesFile("rpcConfig.properties");
         // 集群模式则是多个ip
-        String zookeeperAddress = properties != null && properties.getProperty(RpcConfigEnum.ZK_ADDRESS.getPropertyValue()) != null ? properties.getProperty(RpcConfigEnum.ZK_ADDRESS.getPropertyValue()) : DEFAULT_ZOOKEEPER_ADDRESS;
+        String zookeeperAddress = properties != null && properties.getProperty("zookeeper.address") != null ? properties.getProperty("zookeeper.address") : DEFAULT_ZOOKEEPER_ADDRESS;
         // if zkClient has been started, return directly
         if (zkClient != null && zkClient.getState() == CuratorFrameworkState.STARTED) {
             return zkClient;

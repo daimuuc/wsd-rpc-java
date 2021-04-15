@@ -8,6 +8,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.Properties;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @Author: chenyibai
@@ -15,6 +16,8 @@ import java.util.Properties;
  */
 @Slf4j
 public class PropertiesFileUtil {
+    private static ConcurrentHashMap<String, Properties> map = new ConcurrentHashMap<>();
+
     private PropertiesFileUtil() {
     }
 
@@ -24,6 +27,10 @@ public class PropertiesFileUtil {
         if (url != null) {
             rpcConfigPath = url.getPath() + fileName;
         }
+        if (map.containsKey(rpcConfigPath)) {
+            return map.get(rpcConfigPath);
+        }
+
         Properties properties = null;
         try (InputStreamReader inputStreamReader = new InputStreamReader(
                 new FileInputStream(rpcConfigPath), StandardCharsets.UTF_8)) {
@@ -32,6 +39,8 @@ public class PropertiesFileUtil {
         } catch (IOException e) {
             log.error("occur exception when read properties file [{}]", fileName);
         }
+
+        map.put(rpcConfigPath, properties);
         return properties;
     }
 

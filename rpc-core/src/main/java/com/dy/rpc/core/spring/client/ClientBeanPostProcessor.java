@@ -1,6 +1,7 @@
 package com.dy.rpc.core.spring.client;
 
 import com.dy.rpc.common.extension.ExtensionLoader;
+import com.dy.rpc.common.utils.PropertiesFileUtil;
 import com.dy.rpc.core.annotation.RPCReference;
 import com.dy.rpc.core.annotation.RPCService;
 import com.dy.rpc.core.properties.RpcServiceProperties;
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Field;
 import java.net.InetSocketAddress;
+import java.util.Properties;
 
 /**
  * 自定义BeanPostProcessor
@@ -25,11 +27,13 @@ import java.net.InetSocketAddress;
  */
 @Slf4j
 @Component
-public class SpringClientBeanPostProcessor implements BeanPostProcessor {
+public class ClientBeanPostProcessor implements BeanPostProcessor {
     private final RpcClient rpcClient;
 
-    public SpringClientBeanPostProcessor() {
-        this.rpcClient = ExtensionLoader.getExtensionLoader(RpcClient.class).getExtension("rpcClient");
+    public ClientBeanPostProcessor() {
+        Properties properties = PropertiesFileUtil.readPropertiesFile("rpcConfig.properties");
+        String clientType = properties.getProperty("client.type");
+        this.rpcClient = ExtensionLoader.getExtensionLoader(RpcClient.class).getExtension(clientType);
     }
 
     @Override

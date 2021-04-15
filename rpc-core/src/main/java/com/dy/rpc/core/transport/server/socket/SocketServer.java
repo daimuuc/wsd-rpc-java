@@ -4,6 +4,7 @@ import com.dy.rpc.common.enums.RpcError;
 import com.dy.rpc.common.exception.RpcException;
 import com.dy.rpc.common.extension.ExtensionLoader;
 import com.dy.rpc.common.factory.ThreadPoolFactory;
+import com.dy.rpc.common.utils.PropertiesFileUtil;
 import com.dy.rpc.core.compress.Compress;
 import com.dy.rpc.core.hook.ShutdownHook;
 import com.dy.rpc.core.provider.ServiceProvider;
@@ -20,6 +21,7 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Properties;
 import java.util.concurrent.*;
 
 /**
@@ -34,8 +36,8 @@ public class SocketServer implements RpcServer {
 
     private static final Logger logger = LoggerFactory.getLogger(SocketServer.class);
 
-    private String host = "127.0.0.1";
-    private int port = 9999;
+    private String host;
+    private int port;
     private final ExecutorService threadPool;
     private CommonSerializer serializer;
     private Compress compress;
@@ -45,6 +47,9 @@ public class SocketServer implements RpcServer {
         threadPool = ThreadPoolFactory.createDefaultThreadPool("socket-rpc-server");
         this.serializer = ExtensionLoader.getExtensionLoader(CommonSerializer.class).getExtension("commonSerializer");
         this.compress = ExtensionLoader.getExtensionLoader(Compress.class).getExtension("compress");
+        Properties properties = PropertiesFileUtil.readPropertiesFile("rpcConfig.properties");
+        host = properties.getProperty("server.host");
+        port = Integer.parseInt(properties.getProperty("server.port"));
     }
 
     @Override

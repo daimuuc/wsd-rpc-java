@@ -1,6 +1,6 @@
 package com.dy.rpc.core.annotation;
 
-import com.dy.rpc.core.spring.server.SpringServerScannerRegistrar;
+import com.dy.rpc.core.spring.server.ServerScannerRegistrar;
 import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.*;
@@ -13,7 +13,7 @@ import java.lang.annotation.*;
  */
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
-@Import(SpringServerScannerRegistrar.class)
+@Import(ServerScannerRegistrar.class)
 @Documented
 public @interface RPCServiceServerScan {
 

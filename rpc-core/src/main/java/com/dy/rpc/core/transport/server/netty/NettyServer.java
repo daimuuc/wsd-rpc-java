@@ -3,6 +3,7 @@ package com.dy.rpc.core.transport.server.netty;
 import com.dy.rpc.common.enums.RpcError;
 import com.dy.rpc.common.exception.RpcException;
 import com.dy.rpc.common.extension.ExtensionLoader;
+import com.dy.rpc.common.utils.PropertiesFileUtil;
 import com.dy.rpc.core.codec.CommonDecoder;
 import com.dy.rpc.core.codec.CommonEncoder;
 import com.dy.rpc.core.compress.Compress;
@@ -22,6 +23,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -35,8 +37,8 @@ import java.util.concurrent.TimeUnit;
 public class NettyServer implements RpcServer {
     private static final Logger logger = LoggerFactory.getLogger(NettyServer.class);
 
-    private String host = "127.0.0.1";
-    private int port = 9999;
+    private String host;
+    private int port;
 
     private CommonSerializer serializer;
     private Compress compress;
@@ -44,6 +46,9 @@ public class NettyServer implements RpcServer {
     public NettyServer() {
         this.serializer = ExtensionLoader.getExtensionLoader(CommonSerializer.class).getExtension("commonSerializer");
         this.compress = ExtensionLoader.getExtensionLoader(Compress.class).getExtension("compress");
+        Properties properties = PropertiesFileUtil.readPropertiesFile("rpcConfig.properties");
+        host = properties.getProperty("server.host");
+        port = Integer.parseInt(properties.getProperty("server.port"));
     }
 
     @Override

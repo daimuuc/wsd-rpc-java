@@ -10,10 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.net.InetSocketAddress;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -30,9 +27,11 @@ public class NacosUtil {
     private static final Set<String> serviceNames = new HashSet<>();
     private static InetSocketAddress address;
 
-    private static final String SERVER_ADDR = "127.0.0.1:8848";
+    private static final String SERVER_ADDR;
 
     static {
+        Properties properties = PropertiesFileUtil.readPropertiesFile("rpcConfig.properties");
+        SERVER_ADDR = properties.getProperty("nacos.address");
         namingService = getNacosNamingService();
     }
 

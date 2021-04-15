@@ -24,7 +24,7 @@ import org.springframework.stereotype.Component;
  * @Date: 2021-04-12 20:20
  */
 @Slf4j
-public class SpringClientScannerRegistrar implements ImportBeanDefinitionRegistrar, ResourceLoaderAware {
+public class ClientScannerRegistrar implements ImportBeanDefinitionRegistrar, ResourceLoaderAware {
     private static final String SPRING_BEAN_BASE_PACKAGE = "com.dy.rpc.core.spring.client";
     private static final String BASE_PACKAGE_ATTRIBUTE_NAME = "basePackage";
     private ResourceLoader resourceLoader;
