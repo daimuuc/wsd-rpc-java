@@ -4,42 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3da4bc02-fe09-40d3-984a-147297ad0eb1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-client/src/main/resources/rpc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-client/target/classes/rpc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-common/src/main/java/com/dy/rpc/common/enums/RpcConfigEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-common/src/main/java/com/dy/rpc/common/utils/NacosUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/dy/rpc/common/utils/NacosUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-common/src/main/java/com/dy/rpc/common/utils/PropertiesFileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/dy/rpc/common/utils/PropertiesFileUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-common/target/classes/com/dy/rpc/common/enums/RpcConfigEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-common/target/classes/com/dy/rpc/common/utils/NacosUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/target/classes/com/dy/rpc/common/utils/NacosUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-common/target/classes/com/dy/rpc/common/utils/PropertiesFileUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/target/classes/com/dy/rpc/common/utils/PropertiesFileUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/annotation/RPCServiceClientScan.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/annotation/RPCServiceClientScan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/annotation/RPCServiceServerScan.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/annotation/RPCServiceServerScan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/registry/impl/zk/util/CuratorUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/registry/impl/zk/util/CuratorUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/spring/client/SpringClientBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/spring/client/ClientBeanPostProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/spring/client/SpringClientScannerRegistrar.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/spring/client/ClientScannerRegistrar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/spring/server/SpringServerBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/spring/server/ServerBeanPostProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/spring/server/SpringServerScannerRegistrar.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/spring/server/ServerScannerRegistrar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/server/netty/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/server/netty/NettyServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/server/socket/SocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/server/socket/SocketServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/resources/META-INF/extensions/com.dy.rpc.core.transport.client.RpcClient" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/resources/META-INF/extensions/com.dy.rpc.core.transport.client.RpcClient" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/META-INF/extensions/com.dy.rpc.core.transport.client.RpcClient" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/META-INF/extensions/com.dy.rpc.core.transport.client.RpcClient" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/annotation/RPCServiceClientScan.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/annotation/RPCServiceClientScan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/annotation/RPCServiceServerScan.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/annotation/RPCServiceServerScan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/registry/impl/zk/util/CuratorUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/registry/impl/zk/util/CuratorUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/spring/client/SpringClientBeanPostProcessor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/spring/client/SpringClientScannerRegistrar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/spring/server/SpringServerBeanPostProcessor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/spring/server/SpringServerScannerRegistrar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/server/netty/NettyServer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/server/netty/NettyServer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/server/netty/NettyServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/server/netty/NettyServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/server/socket/SocketServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/server/socket/SocketServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-server/src/main/java/com/dy/rpc/server/SpringTestServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/src/main/java/com/dy/rpc/server/SpringTestServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-server/src/main/resources/rpc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-server/target/classes/com/dy/rpc/server/SpringTestServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/target/classes/com/dy/rpc/server/SpringTestServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-server/target/classes/rpc.properties" beforeDir="false" />
-    </list>
+    <list default="true" id="3da4bc02-fe09-40d3-984a-147297ad0eb1" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/rpc-common/target/" />
     <ignored path="$PROJECT_DIR$/rpc-core/target/" />
     <ignored path="$PROJECT_DIR$/rpc-client/target/" />
@@ -74,7 +39,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rpc-server/src/main/java/com/dy/rpc/server/SpringTestServer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
@@ -86,32 +51,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rpc-server/src/main/resources/rpcConfig.properties">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rpc-client/src/main/java/com/dy/rpc/client/NettyTestClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rpc-client/src/main/java/com/dy/rpc/client/SpringTestClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+            <state relative-caret-position="225">
+              <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rpc-client/src/main/resources/rpcConfig.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -198,6 +145,7 @@
         <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/registry/impl/zk/util/CuratorUtils.java" />
         <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/server/netty/NettyServer.java" />
         <option value="$PROJECT_DIR$/rpc-server/src/main/resources/rpcConfig.properties" />
+        <option value="$PROJECT_DIR$/rpc-client/src/main/resources/rpcConfig.properties" />
       </list>
     </option>
   </component>
@@ -407,7 +355,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1618488616359" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1618488687881" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -596,12 +544,12 @@
       <workItem from="1616241093992" duration="3197000" />
       <workItem from="1616722757517" duration="48000" />
       <workItem from="1617796182475" duration="8778000" />
-      <workItem from="1617967372096" duration="24922000" />
+      <workItem from="1617967372096" duration="25222000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37946000" />
+    <option name="totallyTimeSpent" value="38246000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -614,7 +562,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5917526" visible="true" weight="0.3304721" />
       <window_info id="Structure" order="1" sideWeight="0.5421903" side_tool="true" weight="0.22460657" />
@@ -622,17 +569,17 @@
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.4082474" side_tool="true" visible="true" weight="0.3304721" />
+      <window_info id="Favorites" order="6" sideWeight="0.4082474" side_tool="true" weight="0.3304721" />
       <window_info id="Web" order="7" sideWeight="0.5409638" side_tool="true" weight="0.22460657" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3283767" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4985694" visible="true" weight="0.39900866" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4985694" weight="0.39900866" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39900866" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3283767" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50143063" side_tool="true" weight="0.4" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
@@ -652,25 +599,25 @@
       <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.45960504" visible="true" weight="0.27539343" />
-      <window_info id="Structure" order="1" sideWeight="0.54039496" side_tool="true" visible="true" weight="0.27539343" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5917526" visible="true" weight="0.3304721" />
+      <window_info id="Structure" order="1" sideWeight="0.5421903" side_tool="true" weight="0.22460657" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
+      <window_info id="Favorites" order="6" sideWeight="0.4082474" side_tool="true" visible="true" weight="0.3304721" />
+      <window_info id="Web" order="7" sideWeight="0.5409638" side_tool="true" weight="0.22460657" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3283767" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4985694" visible="true" weight="0.39900866" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39900866" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32891566" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007153" side_tool="true" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50143063" side_tool="true" weight="0.4" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
@@ -948,16 +895,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-client/src/main/java/com/dy/rpc/client/NettyTestClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/client/RpcClientProxy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
@@ -1185,16 +1122,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-client/src/main/java/com/dy/rpc/client/SpringTestClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/server/netty/NettyServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1205,10 +1132,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-client/src/main/resources/rpcConfig.properties">
+    <entry file="file://$PROJECT_DIR$/rpc-server/src/main/java/com/dy/rpc/server/SpringTestServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="315">
+          <caret line="21" column="70" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1219,10 +1149,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-server/src/main/java/com/dy/rpc/server/SpringTestServer.java">
+    <entry file="file://$PROJECT_DIR$/rpc-client/src/main/resources/rpcConfig.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="70" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-client/src/main/java/com/dy/rpc/client/SpringTestClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-client/src/main/java/com/dy/rpc/client/NettyTestClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
