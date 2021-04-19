@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3da4bc02-fe09-40d3-984a-147297ad0eb1" name="Default Changelist" comment="" />
+    <list default="true" id="3da4bc02-fe09-40d3-984a-147297ad0eb1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/rpc-common/target/" />
     <ignored path="$PROJECT_DIR$/rpc-core/target/" />
     <ignored path="$PROJECT_DIR$/rpc-client/target/" />
@@ -39,26 +41,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rpc-server/src/main/java/com/dy/rpc/server/SpringTestServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="70" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rpc-client/src/main/java/com/dy/rpc/client/NettyTestClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -156,7 +144,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -176,169 +164,6 @@
               <item name="wsd-rpc-java" type="b2602c69:ProjectViewProjectNode" />
               <item name="wsd-rpc-java" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="wsd-rpc-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wsd-rpc-java" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wsd-rpc-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wsd-rpc-java" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wsd-rpc-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wsd-rpc-java" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wsd-rpc-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wsd-rpc-java" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wsd-rpc-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wsd-rpc-java" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wsd-rpc-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wsd-rpc-java" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="dy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wsd-rpc-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wsd-rpc-java" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="dy" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wsd-rpc-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wsd-rpc-java" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="dy" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wsd-rpc-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wsd-rpc-java" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wsd-rpc-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wsd-rpc-java" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wsd-rpc-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wsd-rpc-java" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wsd-rpc-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wsd-rpc-java" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wsd-rpc-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wsd-rpc-java" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wsd-rpc-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wsd-rpc-java" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="dy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wsd-rpc-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wsd-rpc-java" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="dy" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wsd-rpc-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wsd-rpc-java" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="dy" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wsd-rpc-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wsd-rpc-java" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="dy" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wsd-rpc-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wsd-rpc-java" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="dy" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -355,7 +180,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1618488687881" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1618491257159" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -544,12 +369,12 @@
       <workItem from="1616241093992" duration="3197000" />
       <workItem from="1616722757517" duration="48000" />
       <workItem from="1617796182475" duration="8778000" />
-      <workItem from="1617967372096" duration="25222000" />
+      <workItem from="1617967372096" duration="26065000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38246000" />
+    <option name="totallyTimeSpent" value="39089000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -563,7 +388,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5917526" visible="true" weight="0.3304721" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5917526" visible="true" weight="0.2746781" />
       <window_info id="Structure" order="1" sideWeight="0.5421903" side_tool="true" weight="0.22460657" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -809,13 +634,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/provider/ServiceProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/client/RpcClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1132,16 +950,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-server/src/main/java/com/dy/rpc/server/SpringTestServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="70" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rpc-server/src/main/resources/rpcConfig.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1173,6 +981,24 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-server/src/main/java/com/dy/rpc/server/SpringTestServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="70" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
         </state>
       </provider>
     </entry>
