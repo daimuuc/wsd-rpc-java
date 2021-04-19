@@ -1,6 +1,8 @@
 # wsd-rpc-java
 基于Netty实现的RPC框架,可以让客户端直接调用服务端方法就像调用本地方法一样简单。
 
+推荐书籍：[分布式服务框架原理与实践_李林锋](https://github.com/oahunc/wsd-rpc-java/blob/master/%E5%88%86%E5%B8%83%E5%BC%8F%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E8%B7%B5_%E6%9D%8E%E6%9E%97%E9%94%8B%E8%91%97.pdf)
+
 # RPC框架设计思路
 ![image](https://github.com/oahunc/wsd-rpc-java/blob/master/images/rpc%E6%9E%B6%E6%9E%84.jpg)
 
