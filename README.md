@@ -26,7 +26,8 @@
 - [x] 使用SPI机制实现松耦合
 - [x] 实现gzip压缩机制
 - [x] 客户端重用相关服务地址信息列表
-- [x] 支持Protobuf序列化机制 
+- [x] 支持Protobuf序列化机制
+- [x] CompletableFuture实现异步服务调用 
 
 [V4.0版本](https://github.com/oahunc/wsd-rpc-java)
 - [x] 集成Spring，通过注解注册服务、消费服务
