@@ -12,6 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.net.InetSocketAddress;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -52,4 +53,20 @@ public class NacosServiceDiscovery implements ServiceDiscovery {
         return null;
     }
 
+    @Override
+    public List<String> lookupServiceList(String serviceName) {
+        try {
+            List<String> serviceAddresses = NacosUtil.getAllInstanceStr(serviceName);
+            if(serviceAddresses.size() == 0) {
+                logger.error("找不到对应的服务: " + serviceName);
+                throw new RpcException(RpcError.SERVICE_NOT_FOUND);
+            }
+
+            return serviceAddresses;
+        } catch (NacosException e) {
+            logger.error("获取服务时有错误发生:", e);
+        }
+
+        return null;
+    }
 }

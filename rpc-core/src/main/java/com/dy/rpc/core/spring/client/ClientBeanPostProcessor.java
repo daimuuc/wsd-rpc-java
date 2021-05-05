@@ -4,6 +4,7 @@ import com.dy.rpc.common.extension.ExtensionLoader;
 import com.dy.rpc.common.utils.PropertiesFileUtil;
 import com.dy.rpc.core.annotation.RPCReference;
 import com.dy.rpc.core.annotation.RPCService;
+import com.dy.rpc.core.cluster.Cluster;
 import com.dy.rpc.core.properties.RpcServiceProperties;
 import com.dy.rpc.core.provider.ServiceProvider;
 import com.dy.rpc.core.registry.ServiceRegistry;
@@ -28,12 +29,12 @@ import java.util.Properties;
 @Slf4j
 @Component
 public class ClientBeanPostProcessor implements BeanPostProcessor {
-    private final RpcClient rpcClient;
+    private final Cluster cluster;
 
     public ClientBeanPostProcessor() {
         Properties properties = PropertiesFileUtil.readPropertiesFile("rpcConfig.properties");
-        String clientType = properties.getProperty("client.type");
-        this.rpcClient = ExtensionLoader.getExtensionLoader(RpcClient.class).getExtension(clientType);
+        String clusterType = properties.getProperty("cluster.type");
+        this.cluster = ExtensionLoader.getExtensionLoader(Cluster.class).getExtension(clusterType);
     }
 
     @Override
@@ -50,7 +51,7 @@ public class ClientBeanPostProcessor implements BeanPostProcessor {
             if (rpcReference != null) {
                 RpcServiceProperties rpcServiceProperties = RpcServiceProperties.builder()
                         .group(rpcReference.group()).version(rpcReference.version()).build();
-                RpcClientProxy rpcClientProxy = new RpcClientProxy(rpcClient, rpcServiceProperties);
+                RpcClientProxy rpcClientProxy = new RpcClientProxy(cluster, rpcServiceProperties);
                 Object clientProxy = rpcClientProxy.getProxy(declaredField.getType());
                 declaredField.setAccessible(true);
                 try {

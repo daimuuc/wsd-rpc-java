@@ -5,6 +5,8 @@ import com.dy.rpc.common.extension.SPI;
 import com.dy.rpc.core.loadbalancer.CommonLoadBalancer;
 import com.dy.rpc.core.serializer.CommonSerializer;
 
+import java.net.InetSocketAddress;
+
 /**
  * 客户端类通用接口
  *
@@ -14,6 +16,6 @@ import com.dy.rpc.core.serializer.CommonSerializer;
 @SPI
 public interface RpcClient {
 
-    Object sendRequest(RpcRequest rpcRequest);
+    Object sendRequest(InetSocketAddress inetSocketAddress, RpcRequest rpcRequest);
 
 }

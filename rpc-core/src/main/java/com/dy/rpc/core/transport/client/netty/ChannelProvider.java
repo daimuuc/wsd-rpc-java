@@ -1,5 +1,6 @@
 package com.dy.rpc.core.transport.client.netty;
 
+import com.dy.rpc.common.exception.RpcException;
 import com.dy.rpc.core.codec.CommonDecoder;
 import com.dy.rpc.core.codec.CommonEncoder;
 import com.dy.rpc.core.compress.Compress;
@@ -64,7 +65,7 @@ public class ChannelProvider {
             channel = connect(bootstrap, inetSocketAddress);
         } catch (ExecutionException e) {
             logger.error("连接客户端时有错误发生", e);
-            return null;
+            throw new RpcException("服务调用失败: ", e);
         }
         channels.put(key, channel);
         return channel;
@@ -77,7 +78,8 @@ public class ChannelProvider {
                 logger.info("客户端连接成功!");
                 completableFuture.complete(future.channel());
             } else {
-                throw new IllegalStateException();
+                completableFuture.completeExceptionally(future.cause());
+//                throw new IllegalStateException();
             }
         });
         return completableFuture.get();

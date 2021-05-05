@@ -2,10 +2,10 @@ package com.dy.rpc.core.transport.client;
 
 import com.dy.rpc.common.entity.RpcRequest;
 import com.dy.rpc.common.entity.RpcResponse;
+import com.dy.rpc.common.exception.RpcException;
 import com.dy.rpc.common.utils.RpcMessageChecker;
+import com.dy.rpc.core.cluster.Cluster;
 import com.dy.rpc.core.properties.RpcServiceProperties;
-import com.dy.rpc.core.transport.client.netty.NettyClient;
-import com.dy.rpc.core.transport.client.socket.SocketClient;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,11 +27,11 @@ public class RpcClientProxy implements InvocationHandler {
 
     private static final Logger logger = LoggerFactory.getLogger(RpcClientProxy.class);
 
-    private final RpcClient client;
+    private final Cluster cluster;
     private final RpcServiceProperties rpcServiceProperties;
 
-    public RpcClientProxy(RpcClient client, RpcServiceProperties rpcServiceProperties) {
-        this.client = client;
+    public RpcClientProxy(Cluster cluster, RpcServiceProperties rpcServiceProperties) {
+        this.cluster = cluster;
         this.rpcServiceProperties = rpcServiceProperties;
     }
 
@@ -49,17 +49,19 @@ public class RpcClientProxy implements InvocationHandler {
                 method.getName(), args, method.getParameterTypes(), false);
 
         RpcResponse rpcResponse = null;
-        if (client instanceof NettyClient) {
-            try {
-                CompletableFuture<RpcResponse> completableFuture = (CompletableFuture<RpcResponse>) client.sendRequest(rpcRequest);
+        try {
+            Object object = cluster.invoke(rpcRequest);
+            if (object instanceof CompletableFuture) {
+                CompletableFuture<RpcResponse> completableFuture = (CompletableFuture<RpcResponse>) object;
                 rpcResponse = completableFuture.get();
-            } catch (Exception e) {
-                logger.error("方法调用请求发送失败", e);
-                return null;
             }
-        }
-        if (client instanceof SocketClient) {
-            rpcResponse = (RpcResponse) client.sendRequest(rpcRequest);
+
+            if (object instanceof RpcResponse) {
+                rpcResponse = (RpcResponse) object;
+            }
+        } catch (Exception e) {
+            logger.error("方法调用请求发送失败", e);
+            throw new RpcException("服务调用失败: ", e);
         }
         RpcMessageChecker.check(rpcRequest, rpcResponse);
 

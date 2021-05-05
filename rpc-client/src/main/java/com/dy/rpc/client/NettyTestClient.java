@@ -1,10 +1,10 @@
 package com.dy.rpc.client;
 
 import com.dy.rpc.api.*;
+import com.dy.rpc.core.cluster.Cluster;
+import com.dy.rpc.core.cluster.impl.FailoverCluster;
 import com.dy.rpc.core.properties.RpcServiceProperties;
-import com.dy.rpc.core.transport.client.RpcClient;
 import com.dy.rpc.core.transport.client.RpcClientProxy;
-import com.dy.rpc.core.transport.client.netty.NettyClient;
 
 /**
  * @Author: chenyibai
@@ -13,10 +13,10 @@ import com.dy.rpc.core.transport.client.netty.NettyClient;
 public class NettyTestClient {
 
     public static void main(String[] args) {
-        RpcClient client = new NettyClient();
+        Cluster cluster = new FailoverCluster();
         RpcServiceProperties rpcServiceProperties = RpcServiceProperties.builder()
                 .group("group_2").version("version_1.0").build();
-        RpcClientProxy proxy = new RpcClientProxy(client, rpcServiceProperties);
+        RpcClientProxy proxy = new RpcClientProxy(cluster, rpcServiceProperties);
 
         HelloService helloService = proxy.getProxy(HelloService.class);
         HelloObject object = new HelloObject(12, "This is a message");

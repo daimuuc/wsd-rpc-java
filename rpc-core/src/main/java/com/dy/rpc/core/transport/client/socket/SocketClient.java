@@ -34,18 +34,16 @@ public class SocketClient implements RpcClient {
 
     private static final Logger logger = LoggerFactory.getLogger(SocketClient.class);
 
-    private final ServiceDiscovery serviceDiscovery;
     private final CommonSerializer serializer;
     private final Compress compress;
 
     public SocketClient() {
-        this.serviceDiscovery = ExtensionLoader.getExtensionLoader(ServiceDiscovery.class).getExtension("serviceDiscovery");
         this.serializer = ExtensionLoader.getExtensionLoader(CommonSerializer.class).getExtension("commonSerializer");
         this.compress = ExtensionLoader.getExtensionLoader(Compress.class).getExtension("compress");
     }
 
     @Override
-    public Object sendRequest(RpcRequest rpcRequest) {
+    public Object sendRequest(InetSocketAddress inetSocketAddress, RpcRequest rpcRequest) {
         if(serializer == null) {
             logger.error("未设置序列化器");
             throw new RpcException(RpcError.SERIALIZER_NOT_FOUND);
@@ -55,7 +53,6 @@ public class SocketClient implements RpcClient {
             throw new RpcException(RpcError.COMPRESS_NOT_FOUND);
         }
 
-        InetSocketAddress inetSocketAddress = serviceDiscovery.lookupService(rpcRequest.getInterfaceName());
         try (Socket socket = new Socket()) {
             socket.connect(inetSocketAddress);
             OutputStream outputStream = socket.getOutputStream();

@@ -55,7 +55,7 @@ public class NettyClient implements RpcClient {
     }
 
     @Override
-    public CompletableFuture<RpcResponse> sendRequest(RpcRequest rpcRequest) {
+    public CompletableFuture<RpcResponse> sendRequest(InetSocketAddress inetSocketAddress, RpcRequest rpcRequest) {
         if(serializer == null) {
             logger.error("未设置序列化器");
             throw new RpcException(RpcError.SERIALIZER_NOT_FOUND);
@@ -67,7 +67,6 @@ public class NettyClient implements RpcClient {
 
         CompletableFuture<RpcResponse> resultFuture = new CompletableFuture<>();
         try {
-            InetSocketAddress inetSocketAddress = serviceDiscovery.lookupService(rpcRequest.getInterfaceName());
             Channel channel = ChannelProvider.get(inetSocketAddress, serializer, compress);
             if (!channel.isActive()) {
                 group.shutdownGracefully();

@@ -13,6 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.net.InetSocketAddress;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -50,4 +51,15 @@ public class ZkServiceDiscovery implements ServiceDiscovery {
         return new InetSocketAddress(host, port);
     }
 
+    @Override
+    public List<String> lookupServiceList(String serviceName) {
+        CuratorFramework zkClient = CuratorUtils.getZkClient();
+        List<String> serviceUrlList = CuratorUtils.getChildrenNodes(zkClient, serviceName);
+        if (serviceUrlList == null || serviceUrlList.size() == 0) {
+            logger.error("找不到对应的服务: " + serviceName);
+            throw new RpcException(RpcError.SERVICE_NOT_FOUND);
+        }
+
+        return serviceUrlList;
+    }
 }
