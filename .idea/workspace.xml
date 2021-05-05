@@ -7,33 +7,6 @@
     <list default="true" id="3da4bc02-fe09-40d3-984a-147297ad0eb1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-client/src/main/java/com/dy/rpc/client/NettyTestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-client/src/main/java/com/dy/rpc/client/NettyTestClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-client/src/main/java/com/dy/rpc/client/SocketTestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-client/src/main/java/com/dy/rpc/client/SocketTestClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-client/src/main/resources/rpcConfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-client/src/main/resources/rpcConfig.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-client/target/classes/com/dy/rpc/client/NettyTestClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-client/target/classes/com/dy/rpc/client/NettyTestClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-client/target/classes/com/dy/rpc/client/SocketTestClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-client/target/classes/com/dy/rpc/client/SocketTestClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-client/target/classes/rpcConfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-client/target/classes/rpcConfig.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/loadbalancer/AbstractLoadBalancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/loadbalancer/AbstractLoadBalancer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/loadbalancer/CommonLoadBalancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/loadbalancer/CommonLoadBalancer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/registry/ServiceDiscovery.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/registry/ServiceDiscovery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/registry/impl/nacos/NacosServiceDiscovery.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/registry/impl/nacos/NacosServiceDiscovery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/registry/impl/zk/ZkServiceDiscovery.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/registry/impl/zk/ZkServiceDiscovery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/spring/client/ClientBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/spring/client/ClientBeanPostProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/client/RpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/client/RpcClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/client/RpcClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/client/RpcClientProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/client/netty/ChannelProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/client/netty/ChannelProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/client/netty/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/client/netty/NettyClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/client/socket/SocketClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/client/socket/SocketClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/loadbalancer/AbstractLoadBalancer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/loadbalancer/AbstractLoadBalancer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/registry/ServiceDiscovery.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/registry/ServiceDiscovery.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/registry/impl/nacos/NacosServiceDiscovery.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/registry/impl/nacos/NacosServiceDiscovery.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/registry/impl/zk/ZkServiceDiscovery.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/registry/impl/zk/ZkServiceDiscovery.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/spring/client/ClientBeanPostProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/spring/client/ClientBeanPostProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/client/RpcClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/client/RpcClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/client/RpcClientProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/client/RpcClientProxy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/client/netty/NettyClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/client/netty/NettyClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/client/socket/SocketClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/dy/rpc/core/transport/client/socket/SocketClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-server/src/main/resources/rpcConfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/src/main/resources/rpcConfig.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/rpc-common/target/" />
     <ignored path="$PROJECT_DIR$/rpc-core/target/" />
@@ -70,22 +43,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/cluster/impl/FailsafeCluster.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rpc-client/src/main/resources/rpcConfig.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="327">
+                <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -152,7 +116,6 @@
         <option value="$PROJECT_DIR$/rpc-core/src/main/resources/META-INF/extensions/com.dy.rpc.core.transport.client.RpcClient" />
         <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/registry/impl/zk/util/CuratorUtils.java" />
         <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/server/netty/NettyServer.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/loadbalancer/CommonLoadBalancer.java" />
         <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/loadbalancer/AbstractLoadBalancer.java" />
         <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/registry/ServiceDiscovery.java" />
@@ -174,6 +137,7 @@
         <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/cluster/impl/FailsafeCluster.java" />
         <option value="$PROJECT_DIR$/rpc-core/src/main/resources/META-INF/extensions/com.dy.rpc.core.cluster.Cluster" />
         <option value="$PROJECT_DIR$/rpc-client/src/main/resources/rpcConfig.properties" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -202,32 +166,6 @@
               <item name="wsd-rpc-java" type="b2602c69:ProjectViewProjectNode" />
               <item name="wsd-rpc-java" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="wsd-rpc-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wsd-rpc-java" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wsd-rpc-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wsd-rpc-java" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wsd-rpc-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wsd-rpc-java" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wsd-rpc-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wsd-rpc-java" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -246,7 +184,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1620221568914" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1620221854484" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -439,12 +377,12 @@
       <workItem from="1618838590295" duration="181000" />
       <workItem from="1619008227237" duration="359000" />
       <workItem from="1620123758241" duration="7503000" />
-      <workItem from="1620217052384" duration="4493000" />
+      <workItem from="1620217052384" duration="4766000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52377000" />
+    <option name="totallyTimeSpent" value="52650000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -458,7 +396,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5917526" visible="true" weight="0.2732475" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5917526" visible="true" weight="0.2732475" />
       <window_info id="Structure" order="1" sideWeight="0.5421903" side_tool="true" weight="0.22460657" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -468,13 +406,13 @@
       <window_info id="Web" order="7" sideWeight="0.5409638" side_tool="true" weight="0.22460657" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3283767" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4985694" visible="true" weight="0.39900866" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4985694" weight="0.39900866" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39900866" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3283767" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3283767" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50143063" side_tool="true" weight="0.4" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
@@ -728,16 +666,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/cluster/ClusterInvoker.java" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="402">
-            <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/cluster/impl/FailfastClusterInvoker.java" />
     <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/loadbalancer/impl/RandomLoadBalancer.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1059,16 +987,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/cluster/AbstractCluster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/cluster/impl/FailfastCluster.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
@@ -1086,16 +1004,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/client/RpcClientProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="63" column="27" selection-start-line="63" selection-start-column="27" selection-end-line="63" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rpc-client/src/main/resources/rpcConfig.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1103,13 +1011,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/cluster/impl/FailsafeCluster.java">
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/transport/client/RpcClientProxy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="21" />
+        <state relative-caret-position="258">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/cluster/impl/FailsafeCluster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/dy/rpc/core/cluster/AbstractCluster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="327">
+            <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
