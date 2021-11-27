@@ -4,7 +4,6 @@ import com.dy.rpc.common.factory.ThreadPoolFactory;
 import com.dy.rpc.common.utils.NacosUtil;
 import com.dy.rpc.core.registry.impl.zk.util.CuratorUtils;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.curator.framework.CuratorFramework;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

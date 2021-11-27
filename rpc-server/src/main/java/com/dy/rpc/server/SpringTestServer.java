@@ -14,7 +14,6 @@ import java.util.Properties;
 // 包扫描。若未指定，则默认扫描该注解标记类所在的包。
 @RPCServiceServerScan(basePackage = {"com.dy.rpc.server.service"})
 public class SpringTestServer {
-
     public static void main(String[] args) {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringTestServer.class);
         Properties properties = PropertiesFileUtil.readPropertiesFile("rpcConfig.properties");
