@@ -1,2 +1,0 @@
-socketClient=com.dy.rpc.core.transport.client.socket.SocketClient
-nettyClient=com.dy.rpc.core.transport.client.netty.NettyClient

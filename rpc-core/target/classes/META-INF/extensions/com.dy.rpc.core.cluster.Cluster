@@ -1,3 +1,0 @@
-failover=com.dy.rpc.core.cluster.impl.FailoverCluster
-failfast=com.dy.rpc.core.cluster.impl.FailfastCluster
-failsafe=com.dy.rpc.core.cluster.impl.FailsafeCluster

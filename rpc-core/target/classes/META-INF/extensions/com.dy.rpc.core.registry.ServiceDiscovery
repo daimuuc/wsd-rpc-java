@@ -1,2 +1,0 @@
-#serviceDiscovery=com.dy.rpc.core.registry.impl.zk.ZkServiceDiscovery
-serviceDiscovery=com.dy.rpc.core.registry.impl.nacos.NacosServiceDiscovery
