@@ -7,8 +7,6 @@ import com.dy.rpc.common.factory.ThreadPoolFactory;
 import com.dy.rpc.common.utils.PropertiesFileUtil;
 import com.dy.rpc.core.compress.Compress;
 import com.dy.rpc.core.hook.ShutdownHook;
-import com.dy.rpc.core.provider.ServiceProvider;
-import com.dy.rpc.core.registry.ServiceRegistry;
 import com.dy.rpc.core.serializer.CommonSerializer;
 import com.dy.rpc.core.transport.server.RequestHandler;
 import com.dy.rpc.core.transport.server.RpcServer;
@@ -22,7 +20,7 @@ import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Properties;
-import java.util.concurrent.*;
+import java.util.concurrent.ExecutorService;
 
 /**
  * Socket方式远程方法调用的提供者（服务端）
@@ -54,7 +52,7 @@ public class SocketServer implements RpcServer {
 
     @Override
     public void start() {
-        if(serializer == null) {
+        if (serializer == null) {
             logger.error("未设置序列化器");
             throw new RpcException(RpcError.SERIALIZER_NOT_FOUND);
         }
